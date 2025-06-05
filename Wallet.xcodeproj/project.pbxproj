@@ -11,17 +11,33 @@
 		5BD9C1212DF1AB0600A80B40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD9C11B2DF1AB0600A80B40 /* LaunchScreen.storyboard */; };
 		5BD9C1222DF1AB0600A80B40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1172DF1AB0600A80B40 /* AppDelegate.swift */; };
 		5BD9C1232DF1AB0600A80B40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C11C2DF1AB0600A80B40 /* SceneDelegate.swift */; };
-		5BD9C1242DF1AB0600A80B40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C11D2DF1AB0600A80B40 /* ViewController.swift */; };
+		5BD9C1242DF1AB0600A80B40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C11D2DF1AB0600A80B40 /* LoginViewController.swift */; };
+		5BD9C12B2DF1B15C00A80B40 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BD9C1282DF1B15C00A80B40 /* Poppins-Medium.ttf */; };
+		5BD9C12C2DF1B15C00A80B40 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BD9C1292DF1B15C00A80B40 /* Poppins-Regular.ttf */; };
+		5BD9C12D2DF1B15C00A80B40 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BD9C12A2DF1B15C00A80B40 /* Poppins-SemiBold.ttf */; };
+		5BD9C1302DF1B25600A80B40 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C12F2DF1B22000A80B40 /* UIFont.swift */; };
+		5BD9C1322DF1B6F700A80B40 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1312DF1B6F400A80B40 /* UIColor.swift */; };
+		5BD9C1342DF1B75F00A80B40 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1332DF1B75A00A80B40 /* Colors.swift */; };
+		5BD9C1382DF1BF1B00A80B40 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1372DF1BF0D00A80B40 /* UserDefaultsWrapper.swift */; };
+		5BD9C13A2DF1BF5A00A80B40 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1392DF1BF5900A80B40 /* Preferences.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5BD9C0FF2DF1AAA700A80B40 /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BD9C0FF2DF1AAA700A80B40 /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Wallet.app; path = "/Users/yuriy/Desktop/Wallet/build/Debug-iphoneos/Wallet.app"; sourceTree = "<absolute>"; };
 		5BD9C1172DF1AB0600A80B40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BD9C1182DF1AB0600A80B40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BD9C1192DF1AB0600A80B40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BD9C11A2DF1AB0600A80B40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BD9C11C2DF1AB0600A80B40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5BD9C11D2DF1AB0600A80B40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5BD9C11D2DF1AB0600A80B40 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5BD9C1282DF1B15C00A80B40 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		5BD9C1292DF1B15C00A80B40 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		5BD9C12A2DF1B15C00A80B40 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		5BD9C12F2DF1B22000A80B40 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		5BD9C1312DF1B6F400A80B40 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		5BD9C1332DF1B75A00A80B40 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		5BD9C1372DF1BF0D00A80B40 /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
+		5BD9C1392DF1BF5900A80B40 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,26 +55,19 @@
 			isa = PBXGroup;
 			children = (
 				5BD9C11E2DF1AB0600A80B40 /* Wallet */,
-				5BD9C1002DF1AAA700A80B40 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		5BD9C1002DF1AAA700A80B40 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5BD9C0FF2DF1AAA700A80B40 /* Wallet.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		5BD9C11E2DF1AB0600A80B40 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
 				5BD9C1252DF1AB0C00A80B40 /* Application */,
-				5BD9C1182DF1AB0600A80B40 /* Assets.xcassets */,
+				5BD9C12E2DF1B21400A80B40 /* Extensions */,
+				5BD9C1262DF1B12600A80B40 /* Resources */,
 				5BD9C1192DF1AB0600A80B40 /* Info.plist */,
 				5BD9C11B2DF1AB0600A80B40 /* LaunchScreen.storyboard */,
-				5BD9C11D2DF1AB0600A80B40 /* ViewController.swift */,
+				5BD9C1362DF1BEBF00A80B40 /* Preferences */,
+				5BD9C1352DF1BB0F00A80B40 /* LoginViewController */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -70,6 +79,52 @@
 				5BD9C1172DF1AB0600A80B40 /* AppDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		5BD9C1262DF1B12600A80B40 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1182DF1AB0600A80B40 /* Assets.xcassets */,
+				5BD9C1332DF1B75A00A80B40 /* Colors.swift */,
+				5BD9C1272DF1B13600A80B40 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5BD9C1272DF1B13600A80B40 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1282DF1B15C00A80B40 /* Poppins-Medium.ttf */,
+				5BD9C1292DF1B15C00A80B40 /* Poppins-Regular.ttf */,
+				5BD9C12A2DF1B15C00A80B40 /* Poppins-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5BD9C12E2DF1B21400A80B40 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1312DF1B6F400A80B40 /* UIColor.swift */,
+				5BD9C12F2DF1B22000A80B40 /* UIFont.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5BD9C1352DF1BB0F00A80B40 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C11D2DF1AB0600A80B40 /* LoginViewController.swift */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		5BD9C1362DF1BEBF00A80B40 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1392DF1BF5900A80B40 /* Preferences.swift */,
+				5BD9C1372DF1BF0D00A80B40 /* UserDefaultsWrapper.swift */,
+			);
+			path = Preferences;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +174,7 @@
 			mainGroup = 5BD9C0F62DF1AAA700A80B40;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 5BD9C1002DF1AAA700A80B40 /* Products */;
+			productRefGroup = 5BD9C0F62DF1AAA700A80B40;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -134,6 +189,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BD9C11F2DF1AB0600A80B40 /* Assets.xcassets in Resources */,
+				5BD9C12B2DF1B15C00A80B40 /* Poppins-Medium.ttf in Resources */,
+				5BD9C12C2DF1B15C00A80B40 /* Poppins-Regular.ttf in Resources */,
+				5BD9C12D2DF1B15C00A80B40 /* Poppins-SemiBold.ttf in Resources */,
 				5BD9C1212DF1AB0600A80B40 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,9 +203,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BD9C1382DF1BF1B00A80B40 /* UserDefaultsWrapper.swift in Sources */,
+				5BD9C1302DF1B25600A80B40 /* UIFont.swift in Sources */,
+				5BD9C1342DF1B75F00A80B40 /* Colors.swift in Sources */,
 				5BD9C1222DF1AB0600A80B40 /* AppDelegate.swift in Sources */,
 				5BD9C1232DF1AB0600A80B40 /* SceneDelegate.swift in Sources */,
-				5BD9C1242DF1AB0600A80B40 /* ViewController.swift in Sources */,
+				5BD9C1242DF1AB0600A80B40 /* LoginViewController.swift in Sources */,
+				5BD9C13A2DF1BF5A00A80B40 /* Preferences.swift in Sources */,
+				5BD9C1322DF1B6F700A80B40 /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +242,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -206,6 +270,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

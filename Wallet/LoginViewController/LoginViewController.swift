@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  Wallet
 //
 //  Created by Yuriy on 05.06.2025.
@@ -7,11 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
     }
 }
 
+#if DEBUG
+#Preview {
+    LoginViewController()
+}
+#endif
