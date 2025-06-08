@@ -23,11 +23,20 @@
 		5BD9C14A2DF1C13E00A80B40 /* LoginViewTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1492DF1C13600A80B40 /* LoginViewTextField.swift */; };
 		5BD9C14D2DF1CAEB00A80B40 /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C14C2DF1CAE900A80B40 /* UIControl.swift */; };
 		5BD9C15D2DF1D4E800A80B40 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C15C2DF1D4E600A80B40 /* TextField.swift */; };
-		5BD9C1622DF1DE5600A80B40 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1612DF1DE4F00A80B40 /* MainViewController.swift */; };
+		5BD9C1642DF2349E00A80B40 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1632DF2349D00A80B40 /* UIAlertController.swift */; };
+		5BD9C1762DF5F0DE00A80B40 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1752DF5F0DC00A80B40 /* UIView.swift */; };
+		5BD9C17B2DF5FAF100A80B40 /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C17A2DF5FAEF00A80B40 /* LoginCredentials.swift */; };
+		5BD9C17D2DF5FB4600A80B40 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C17C2DF5FB4400A80B40 /* AuthError.swift */; };
+		5BD9C1802DF5FB9300A80B40 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C17F2DF5FB9000A80B40 /* AuthRepository.swift */; };
+		5BD9C1842DF5FBD100A80B40 /* AuthenticateUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1832DF5FBCF00A80B40 /* AuthenticateUseCase.swift */; };
+		5BD9C1882DF5FC5900A80B40 /* HardcodedAuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1872DF5FC5800A80B40 /* HardcodedAuthRepository.swift */; };
+		5BD9C18B2DF5FD0800A80B40 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C18A2DF5FD0600A80B40 /* LoginPresenter.swift */; };
+		5BD9C18D2DF6020000A80B40 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C18C2DF601FC00A80B40 /* Protocols.swift */; };
+		5BD9C1902DF6060E00A80B40 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C18F2DF6060800A80B40 /* Coordinator.swift */; };
+		5BD9C1922DF606B200A80B40 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1912DF606AB00A80B40 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5BD9C0FF2DF1AAA700A80B40 /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Wallet.app; path = "/Users/yuriy/Desktop/Wallet/build/Debug-iphoneos/Wallet.app"; sourceTree = "<absolute>"; };
 		5BD9C1172DF1AB0600A80B40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BD9C1182DF1AB0600A80B40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BD9C1192DF1AB0600A80B40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,7 +54,18 @@
 		5BD9C1492DF1C13600A80B40 /* LoginViewTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTextField.swift; sourceTree = "<group>"; };
 		5BD9C14C2DF1CAE900A80B40 /* UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
 		5BD9C15C2DF1D4E600A80B40 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
-		5BD9C1612DF1DE4F00A80B40 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5BD9C1632DF2349D00A80B40 /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
+		5BD9C1742DF5EEFD00A80B40 /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BD9C1752DF5F0DC00A80B40 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		5BD9C17A2DF5FAEF00A80B40 /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
+		5BD9C17C2DF5FB4400A80B40 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
+		5BD9C17F2DF5FB9000A80B40 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		5BD9C1832DF5FBCF00A80B40 /* AuthenticateUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUseCase.swift; sourceTree = "<group>"; };
+		5BD9C1872DF5FC5800A80B40 /* HardcodedAuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardcodedAuthRepository.swift; sourceTree = "<group>"; };
+		5BD9C18A2DF5FD0600A80B40 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		5BD9C18C2DF601FC00A80B40 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		5BD9C18F2DF6060800A80B40 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		5BD9C1912DF606AB00A80B40 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				5BD9C11E2DF1AB0600A80B40 /* Wallet */,
+				5BD9C1742DF5EEFD00A80B40 /* Wallet.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,14 +91,13 @@
 			isa = PBXGroup;
 			children = (
 				5BD9C1252DF1AB0C00A80B40 /* Application */,
+				5BD9C18E2DF6036300A80B40 /* Flow */,
 				5BD9C12E2DF1B21400A80B40 /* Extensions */,
 				5BD9C1262DF1B12600A80B40 /* Resources */,
 				5BD9C15B2DF1D4D200A80B40 /* Helpers */,
 				5BD9C11B2DF1AB0600A80B40 /* LaunchScreen.storyboard */,
 				5BD9C1192DF1AB0600A80B40 /* Info.plist */,
 				5BD9C1362DF1BEBF00A80B40 /* Preferences */,
-				5BD9C1602DF1DE2C00A80B40 /* DetailViewController */,
-				5BD9C15F2DF1DE1100A80B40 /* MainViewController */,
 				5BD9C1352DF1BB0F00A80B40 /* LoginViewController */,
 			);
 			path = Wallet;
@@ -115,6 +135,8 @@
 		5BD9C12E2DF1B21400A80B40 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5BD9C1752DF5F0DC00A80B40 /* UIView.swift */,
+				5BD9C1632DF2349D00A80B40 /* UIAlertController.swift */,
 				5BD9C14C2DF1CAE900A80B40 /* UIControl.swift */,
 				5BD9C1312DF1B6F400A80B40 /* UIColor.swift */,
 				5BD9C12F2DF1B22000A80B40 /* UIFont.swift */,
@@ -125,8 +147,9 @@
 		5BD9C1352DF1BB0F00A80B40 /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
-				5BD9C11D2DF1AB0600A80B40 /* LoginViewController.swift */,
-				5BD9C1482DF1C12600A80B40 /* Components */,
+				5BD9C1852DF5FC3500A80B40 /* Data */,
+				5BD9C1782DF5FACB00A80B40 /* Domain */,
+				5BD9C1772DF5F92B00A80B40 /* Presentation */,
 			);
 			path = LoginViewController;
 			sourceTree = "<group>";
@@ -140,12 +163,13 @@
 			path = Preferences;
 			sourceTree = "<group>";
 		};
-		5BD9C1482DF1C12600A80B40 /* Components */ = {
+		5BD9C1482DF1C12600A80B40 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5BD9C11D2DF1AB0600A80B40 /* LoginViewController.swift */,
 				5BD9C1492DF1C13600A80B40 /* LoginViewTextField.swift */,
 			);
-			path = Components;
+			path = View;
 			sourceTree = "<group>";
 		};
 		5BD9C15B2DF1D4D200A80B40 /* Helpers */ = {
@@ -156,19 +180,82 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		5BD9C15F2DF1DE1100A80B40 /* MainViewController */ = {
+		5BD9C1772DF5F92B00A80B40 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				5BD9C1612DF1DE4F00A80B40 /* MainViewController.swift */,
+				5BD9C1892DF5FCFA00A80B40 /* Presenter */,
+				5BD9C1482DF1C12600A80B40 /* View */,
 			);
-			path = MainViewController;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
-		5BD9C1602DF1DE2C00A80B40 /* DetailViewController */ = {
+		5BD9C1782DF5FACB00A80B40 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				5BD9C1822DF5FBC500A80B40 /* UseCase */,
+				5BD9C17E2DF5FB7800A80B40 /* Repository */,
+				5BD9C1792DF5FAD600A80B40 /* Entity */,
 			);
-			path = DetailViewController;
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		5BD9C1792DF5FAD600A80B40 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C17C2DF5FB4400A80B40 /* AuthError.swift */,
+				5BD9C17A2DF5FAEF00A80B40 /* LoginCredentials.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5BD9C17E2DF5FB7800A80B40 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C17F2DF5FB9000A80B40 /* AuthRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		5BD9C1822DF5FBC500A80B40 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1832DF5FBCF00A80B40 /* AuthenticateUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		5BD9C1852DF5FC3500A80B40 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1862DF5FC4F00A80B40 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5BD9C1862DF5FC4F00A80B40 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1872DF5FC5800A80B40 /* HardcodedAuthRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		5BD9C1892DF5FCFA00A80B40 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C18C2DF601FC00A80B40 /* Protocols.swift */,
+				5BD9C18A2DF5FD0600A80B40 /* LoginPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5BD9C18E2DF6036300A80B40 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C18F2DF6060800A80B40 /* Coordinator.swift */,
+				5BD9C1912DF606AB00A80B40 /* AppCoordinator.swift */,
+			);
+			path = Flow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,7 +277,7 @@
 			packageProductDependencies = (
 			);
 			productName = Wallet;
-			productReference = 5BD9C0FF2DF1AAA700A80B40 /* Wallet.app */;
+			productReference = 5BD9C1742DF5EEFD00A80B40 /* Wallet.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -247,18 +334,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BD9C1882DF5FC5900A80B40 /* HardcodedAuthRepository.swift in Sources */,
 				5BD9C1382DF1BF1B00A80B40 /* UserDefaultsWrapper.swift in Sources */,
 				5BD9C15D2DF1D4E800A80B40 /* TextField.swift in Sources */,
 				5BD9C14D2DF1CAEB00A80B40 /* UIControl.swift in Sources */,
-				5BD9C1622DF1DE5600A80B40 /* MainViewController.swift in Sources */,
+				5BD9C18B2DF5FD0800A80B40 /* LoginPresenter.swift in Sources */,
+				5BD9C1922DF606B200A80B40 /* AppCoordinator.swift in Sources */,
+				5BD9C1902DF6060E00A80B40 /* Coordinator.swift in Sources */,
+				5BD9C1842DF5FBD100A80B40 /* AuthenticateUseCase.swift in Sources */,
 				5BD9C1302DF1B25600A80B40 /* UIFont.swift in Sources */,
 				5BD9C1342DF1B75F00A80B40 /* Colors.swift in Sources */,
+				5BD9C18D2DF6020000A80B40 /* Protocols.swift in Sources */,
+				5BD9C17D2DF5FB4600A80B40 /* AuthError.swift in Sources */,
+				5BD9C17B2DF5FAF100A80B40 /* LoginCredentials.swift in Sources */,
 				5BD9C14A2DF1C13E00A80B40 /* LoginViewTextField.swift in Sources */,
 				5BD9C1222DF1AB0600A80B40 /* AppDelegate.swift in Sources */,
 				5BD9C1232DF1AB0600A80B40 /* SceneDelegate.swift in Sources */,
 				5BD9C1242DF1AB0600A80B40 /* LoginViewController.swift in Sources */,
+				5BD9C1762DF5F0DE00A80B40 /* UIView.swift in Sources */,
+				5BD9C1802DF5FB9300A80B40 /* AuthRepository.swift in Sources */,
 				5BD9C13A2DF1BF5A00A80B40 /* Preferences.swift in Sources */,
 				5BD9C1322DF1B6F700A80B40 /* UIColor.swift in Sources */,
+				5BD9C1642DF2349E00A80B40 /* UIAlertController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

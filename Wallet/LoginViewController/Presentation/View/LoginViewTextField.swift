@@ -13,13 +13,12 @@ final class LoginViewTextField: UIView {
     
     let iconImageView: UIImageView = {
         $0.contentMode = .scaleAspectFit
-        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.setContentHuggingPriority(.required, for: .horizontal)
         return $0
     }(UIImageView())
 
     let textField: TextField = {
         $0.font = .poppins(weight: .regular, size: 15)
-        $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(TextField())
 
@@ -34,7 +33,6 @@ final class LoginViewTextField: UIView {
             top: 0, left: Constants.inset, bottom: 0, right: Constants.inset
         )
         $0.isLayoutMarginsRelativeArrangement = true
-        $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UIStackView(arrangedSubviews: [iconImageView, textField]))
 
@@ -43,7 +41,6 @@ final class LoginViewTextField: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         setupView()
     }
 
@@ -55,6 +52,7 @@ final class LoginViewTextField: UIView {
 
     private func setupView() {
         addSubview(horizontalStackView)
+        turnoffTAMIC()
 
         NSLayoutConstraint.activate([
             horizontalStackView.topAnchor.constraint(equalTo: topAnchor),
@@ -63,13 +61,6 @@ final class LoginViewTextField: UIView {
             horizontalStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
             horizontalStackView.heightAnchor.constraint(equalToConstant: Constants.height)
         ])
-
-        iconImageView.setContentHuggingPriority(.required, for: .horizontal)
-        iconImageView.setContentCompressionResistancePriority(.required, for: .horizontal)
-
-        textField.setContentHuggingPriority(.defaultLow, for: .horizontal)
-        textField.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
-
     }
     
     //MARK: - Constants
@@ -83,3 +74,9 @@ final class LoginViewTextField: UIView {
     }
 }
 
+
+#if DEBUG
+#Preview {
+    LoginModuleFactory.make()
+}
+#endif
