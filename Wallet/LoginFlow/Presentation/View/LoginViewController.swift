@@ -26,7 +26,6 @@ final class LoginViewController: UIViewController {
     private let passwordTextField: LoginViewTextField = {
         $0.iconImageView.image = .passwordiconss
         $0.textField.placeholder = Strings.passwordPlaceholder
-        $0.textField.isSecureTextEntry = true
         return $0
     }(LoginViewTextField())
     
@@ -84,6 +83,11 @@ final class LoginViewController: UIViewController {
         setupKeyboardObserver()
         setupView()
         presenter.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -178,11 +182,11 @@ extension LoginViewController: LoginViewDelegate {
 
 
 struct LoginModuleFactory {
-    static func make() -> UIViewController {
+    static func make(output: LoginPresenterOutput? = nil) -> UIViewController {
         let repository = HardcodedAuthRepository()
         let useCase = AuthenticateUseCaseImpl(repository: repository)
         let presenter = LoginPresenterImpl(authenticate: useCase)
-        presenter.output
+        presenter.output = output
         let view = LoginViewController(presenter: presenter)
         return view
     }

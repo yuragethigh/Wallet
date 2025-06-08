@@ -7,7 +7,8 @@
 
 import Foundation
 
-protocol Coordinator {
-    var childCoordinators: [Coordinator] { get }
+protocol Coordinator: AnyObject {
+    var childs: [Coordinator] { get }
     func start()
 }
+

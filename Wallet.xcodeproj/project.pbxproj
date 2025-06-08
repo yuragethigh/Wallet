@@ -34,6 +34,8 @@
 		5BD9C18D2DF6020000A80B40 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C18C2DF601FC00A80B40 /* Protocols.swift */; };
 		5BD9C1902DF6060E00A80B40 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C18F2DF6060800A80B40 /* Coordinator.swift */; };
 		5BD9C1922DF606B200A80B40 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1912DF606AB00A80B40 /* AppCoordinator.swift */; };
+		5BD9C1A22DF60AA700A80B40 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1A12DF60A9A00A80B40 /* LoginCoordinator.swift */; };
+		5BD9C1A72DF61E7600A80B40 /* TabbarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1A62DF61E6E00A80B40 /* TabbarCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		5BD9C18C2DF601FC00A80B40 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		5BD9C18F2DF6060800A80B40 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		5BD9C1912DF606AB00A80B40 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		5BD9C1A12DF60A9A00A80B40 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		5BD9C1A62DF61E6E00A80B40 /* TabbarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,14 +95,15 @@
 			isa = PBXGroup;
 			children = (
 				5BD9C1252DF1AB0C00A80B40 /* Application */,
-				5BD9C18E2DF6036300A80B40 /* Flow */,
+				5BD9C18E2DF6036300A80B40 /* App */,
 				5BD9C12E2DF1B21400A80B40 /* Extensions */,
 				5BD9C1262DF1B12600A80B40 /* Resources */,
 				5BD9C15B2DF1D4D200A80B40 /* Helpers */,
 				5BD9C11B2DF1AB0600A80B40 /* LaunchScreen.storyboard */,
 				5BD9C1192DF1AB0600A80B40 /* Info.plist */,
 				5BD9C1362DF1BEBF00A80B40 /* Preferences */,
-				5BD9C1352DF1BB0F00A80B40 /* LoginViewController */,
+				5BD9C1352DF1BB0F00A80B40 /* LoginFlow */,
+				5BD9C1A32DF61ABA00A80B40 /* TabbarFlow */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -144,14 +149,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		5BD9C1352DF1BB0F00A80B40 /* LoginViewController */ = {
+		5BD9C1352DF1BB0F00A80B40 /* LoginFlow */ = {
 			isa = PBXGroup;
 			children = (
 				5BD9C1852DF5FC3500A80B40 /* Data */,
 				5BD9C1782DF5FACB00A80B40 /* Domain */,
 				5BD9C1772DF5F92B00A80B40 /* Presentation */,
 			);
-			path = LoginViewController;
+			path = LoginFlow;
 			sourceTree = "<group>";
 		};
 		5BD9C1362DF1BEBF00A80B40 /* Preferences */ = {
@@ -183,6 +188,7 @@
 		5BD9C1772DF5F92B00A80B40 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				5BD9C1A02DF60A6C00A80B40 /* Flow */,
 				5BD9C1892DF5FCFA00A80B40 /* Presenter */,
 				5BD9C1482DF1C12600A80B40 /* View */,
 			);
@@ -249,11 +255,43 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		5BD9C18E2DF6036300A80B40 /* Flow */ = {
+		5BD9C18E2DF6036300A80B40 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				5BD9C18F2DF6060800A80B40 /* Coordinator.swift */,
 				5BD9C1912DF606AB00A80B40 /* AppCoordinator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5BD9C1A02DF60A6C00A80B40 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1A12DF60A9A00A80B40 /* LoginCoordinator.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		5BD9C1A32DF61ABA00A80B40 /* TabbarFlow */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1A52DF61E6100A80B40 /* Flow */,
+				5BD9C1A42DF61E5800A80B40 /* View */,
+			);
+			path = TabbarFlow;
+			sourceTree = "<group>";
+		};
+		5BD9C1A42DF61E5800A80B40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BD9C1A52DF61E6100A80B40 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1A62DF61E6E00A80B40 /* TabbarCoordinator.swift */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -344,6 +382,7 @@
 				5BD9C1842DF5FBD100A80B40 /* AuthenticateUseCase.swift in Sources */,
 				5BD9C1302DF1B25600A80B40 /* UIFont.swift in Sources */,
 				5BD9C1342DF1B75F00A80B40 /* Colors.swift in Sources */,
+				5BD9C1A72DF61E7600A80B40 /* TabbarCoordinator.swift in Sources */,
 				5BD9C18D2DF6020000A80B40 /* Protocols.swift in Sources */,
 				5BD9C17D2DF5FB4600A80B40 /* AuthError.swift in Sources */,
 				5BD9C17B2DF5FAF100A80B40 /* LoginCredentials.swift in Sources */,
@@ -351,6 +390,7 @@
 				5BD9C1222DF1AB0600A80B40 /* AppDelegate.swift in Sources */,
 				5BD9C1232DF1AB0600A80B40 /* SceneDelegate.swift in Sources */,
 				5BD9C1242DF1AB0600A80B40 /* LoginViewController.swift in Sources */,
+				5BD9C1A22DF60AA700A80B40 /* LoginCoordinator.swift in Sources */,
 				5BD9C1762DF5F0DE00A80B40 /* UIView.swift in Sources */,
 				5BD9C1802DF5FB9300A80B40 /* AuthRepository.swift in Sources */,
 				5BD9C13A2DF1BF5A00A80B40 /* Preferences.swift in Sources */,
