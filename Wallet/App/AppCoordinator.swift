@@ -20,7 +20,7 @@ final class AppCoordinator: Coordinator {
     
     func start() {
         if preferences.isAuthorized {
-            startMain()
+            startTabbar()
         } else {
             startLogin()
         }
@@ -34,12 +34,12 @@ final class AppCoordinator: Coordinator {
         switchFlow(login.controller)
         login.didFinishFlow = { [weak self] in
             self?.preferences.isAuthorized = true
-            self?.startMain()
+            self?.startTabbar()
             self?.childs.removeAll(where: { $0 === login })
         }
     }
     
-    private func startMain() {
+    private func startTabbar() {
         let tabbarCoordinator = TabbarCoordinator()
         tabbarCoordinator.start()
         childs.append(tabbarCoordinator)
@@ -56,10 +56,7 @@ final class AppCoordinator: Coordinator {
 fileprivate extension AppCoordinator {
     func switchFlow(_ controller: UIViewController?) {
         if let controller {
-            let navController = UINavigationController(
-                rootViewController: controller
-            )
-            window.rootViewController = navController
+            window.rootViewController = controller
             UIView.transition(with: window,
                               duration: 0.3,
                               options: [.transitionCrossDissolve],

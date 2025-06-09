@@ -13,9 +13,9 @@ final class TabbarCoordinator: Coordinator {
     var didFinishFlow: (() -> Void)?
     
     func start() {
-        let vc = UITabBarController()
-        vc.view.backgroundColor = .systemBlue
+        let vc = TabbarController()
         controller = vc
     }
 }
+
 

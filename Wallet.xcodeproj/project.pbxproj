@@ -36,6 +36,9 @@
 		5BD9C1922DF606B200A80B40 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1912DF606AB00A80B40 /* AppCoordinator.swift */; };
 		5BD9C1A22DF60AA700A80B40 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1A12DF60A9A00A80B40 /* LoginCoordinator.swift */; };
 		5BD9C1A72DF61E7600A80B40 /* TabbarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1A62DF61E6E00A80B40 /* TabbarCoordinator.swift */; };
+		5BD9C1A92DF61F4500A80B40 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1A82DF61F3A00A80B40 /* TabbarController.swift */; };
+		5BD9C1AC2DF6D3FD00A80B40 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1AB2DF6D3FD00A80B40 /* HomeViewController.swift */; };
+		5BD9C1B02DF71A8600A80B40 /* HomeHeaderTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1AF2DF71A8300A80B40 /* HomeHeaderTVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +73,9 @@
 		5BD9C1912DF606AB00A80B40 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		5BD9C1A12DF60A9A00A80B40 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		5BD9C1A62DF61E6E00A80B40 /* TabbarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarCoordinator.swift; sourceTree = "<group>"; };
+		5BD9C1A82DF61F3A00A80B40 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		5BD9C1AB2DF6D3FD00A80B40 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5BD9C1AF2DF71A8300A80B40 /* HomeHeaderTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderTVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,7 +194,7 @@
 		5BD9C1772DF5F92B00A80B40 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				5BD9C1A02DF60A6C00A80B40 /* Flow */,
+				5BD9C1A02DF60A6C00A80B40 /* Coordinator */,
 				5BD9C1892DF5FCFA00A80B40 /* Presenter */,
 				5BD9C1482DF1C12600A80B40 /* View */,
 			);
@@ -264,19 +270,20 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		5BD9C1A02DF60A6C00A80B40 /* Flow */ = {
+		5BD9C1A02DF60A6C00A80B40 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				5BD9C1A12DF60A9A00A80B40 /* LoginCoordinator.swift */,
 			);
-			path = Flow;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		5BD9C1A32DF61ABA00A80B40 /* TabbarFlow */ = {
 			isa = PBXGroup;
 			children = (
-				5BD9C1A52DF61E6100A80B40 /* Flow */,
 				5BD9C1A42DF61E5800A80B40 /* View */,
+				5BD9C1A52DF61E6100A80B40 /* Coordinator */,
+				5BD9C1AA2DF6D3C500A80B40 /* HomeFlow */,
 			);
 			path = TabbarFlow;
 			sourceTree = "<group>";
@@ -284,16 +291,42 @@
 		5BD9C1A42DF61E5800A80B40 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5BD9C1A82DF61F3A00A80B40 /* TabbarController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		5BD9C1A52DF61E6100A80B40 /* Flow */ = {
+		5BD9C1A52DF61E6100A80B40 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				5BD9C1A62DF61E6E00A80B40 /* TabbarCoordinator.swift */,
 			);
-			path = Flow;
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		5BD9C1AA2DF6D3C500A80B40 /* HomeFlow */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1AD2DF71A6100A80B40 /* Presentation */,
+			);
+			path = HomeFlow;
+			sourceTree = "<group>";
+		};
+		5BD9C1AD2DF71A6100A80B40 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1AE2DF71A6C00A80B40 /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		5BD9C1AE2DF71A6C00A80B40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1AF2DF71A8300A80B40 /* HomeHeaderTVCell.swift */,
+				5BD9C1AB2DF6D3FD00A80B40 /* HomeViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,13 +408,16 @@
 				5BD9C1882DF5FC5900A80B40 /* HardcodedAuthRepository.swift in Sources */,
 				5BD9C1382DF1BF1B00A80B40 /* UserDefaultsWrapper.swift in Sources */,
 				5BD9C15D2DF1D4E800A80B40 /* TextField.swift in Sources */,
+				5BD9C1A92DF61F4500A80B40 /* TabbarController.swift in Sources */,
 				5BD9C14D2DF1CAEB00A80B40 /* UIControl.swift in Sources */,
 				5BD9C18B2DF5FD0800A80B40 /* LoginPresenter.swift in Sources */,
 				5BD9C1922DF606B200A80B40 /* AppCoordinator.swift in Sources */,
+				5BD9C1B02DF71A8600A80B40 /* HomeHeaderTVCell.swift in Sources */,
 				5BD9C1902DF6060E00A80B40 /* Coordinator.swift in Sources */,
 				5BD9C1842DF5FBD100A80B40 /* AuthenticateUseCase.swift in Sources */,
 				5BD9C1302DF1B25600A80B40 /* UIFont.swift in Sources */,
 				5BD9C1342DF1B75F00A80B40 /* Colors.swift in Sources */,
+				5BD9C1AC2DF6D3FD00A80B40 /* HomeViewController.swift in Sources */,
 				5BD9C1A72DF61E7600A80B40 /* TabbarCoordinator.swift in Sources */,
 				5BD9C18D2DF6020000A80B40 /* Protocols.swift in Sources */,
 				5BD9C17D2DF5FB4600A80B40 /* AuthError.swift in Sources */,
