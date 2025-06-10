@@ -30,23 +30,24 @@ final class HomeHeaderTVCell: UITableViewCell {
         return $0
     }(UILabel())
     
-    private lazy var sortButton: UIButton = {
+    private lazy var sortButton: LargeAreaButton = {
         $0.setImage(.listButton, for: .normal)
+        $0.touchAreaPadding = .init(top: 10, left: 10, bottom: 10, right: 10)
         $0.addTarget(self, action: #selector(sortButtonTapped), for: .touchUpInside)
         return $0
-    }(UIButton())
+    }(LargeAreaButton())
     
     private lazy var bottomStack: UIStackView = {
         $0.axis = .horizontal
         $0.alignment = .center
         $0.distribution = .fill
-        $0.backgroundColor = .white
         $0.layer.cornerRadius = Constants.bottomStackCornerRadius
         $0.layer.maskedCorners = [.layerMinXMinYCorner,
                                   .layerMaxXMinYCorner]
         $0.clipsToBounds = true
         $0.layoutMargins = Constants.bottomStackMargins
         $0.isLayoutMarginsRelativeArrangement = true
+        $0.backgroundColor = .colorF7F7FA
         return $0
     }(UIStackView(arrangedSubviews: [trendingLabel, sortButton]))
     

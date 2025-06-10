@@ -39,6 +39,13 @@
 		5BD9C1A92DF61F4500A80B40 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1A82DF61F3A00A80B40 /* TabbarController.swift */; };
 		5BD9C1AC2DF6D3FD00A80B40 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1AB2DF6D3FD00A80B40 /* HomeViewController.swift */; };
 		5BD9C1B02DF71A8600A80B40 /* HomeHeaderTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1AF2DF71A8300A80B40 /* HomeHeaderTVCell.swift */; };
+		5BD9C1B32DF7233B00A80B40 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1B22DF7233500A80B40 /* Network.swift */; };
+		5BD9C1B82DF74FBC00A80B40 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1B72DF74FB700A80B40 /* Coin.swift */; };
+		5BD9C1BA2DF766AF00A80B40 /* HomeCoinTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1B92DF7669E00A80B40 /* HomeCoinTVCell.swift */; };
+		5BD9C1BC2DF77F7C00A80B40 /* LargeAreaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1BB2DF77F7400A80B40 /* LargeAreaButton.swift */; };
+		5BD9C1BF2DF82CAD00A80B40 /* MessariCryptoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1BE2DF82CAB00A80B40 /* MessariCryptoRepository.swift */; };
+		5BD9C1C22DF82D5B00A80B40 /* MessariDecodableDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1C12DF82D5900A80B40 /* MessariDecodableDTO.swift */; };
+		5BD9C1C52DF82DA700A80B40 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1C42DF82DA600A80B40 /* Double.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +83,13 @@
 		5BD9C1A82DF61F3A00A80B40 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		5BD9C1AB2DF6D3FD00A80B40 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5BD9C1AF2DF71A8300A80B40 /* HomeHeaderTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderTVCell.swift; sourceTree = "<group>"; };
+		5BD9C1B22DF7233500A80B40 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		5BD9C1B72DF74FB700A80B40 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		5BD9C1B92DF7669E00A80B40 /* HomeCoinTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoinTVCell.swift; sourceTree = "<group>"; };
+		5BD9C1BB2DF77F7400A80B40 /* LargeAreaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeAreaButton.swift; sourceTree = "<group>"; };
+		5BD9C1BE2DF82CAB00A80B40 /* MessariCryptoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessariCryptoRepository.swift; sourceTree = "<group>"; };
+		5BD9C1C12DF82D5900A80B40 /* MessariDecodableDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessariDecodableDTO.swift; sourceTree = "<group>"; };
+		5BD9C1C42DF82DA600A80B40 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +114,7 @@
 		5BD9C11E2DF1AB0600A80B40 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				5BD9C1B12DF7231D00A80B40 /* Network */,
 				5BD9C1252DF1AB0C00A80B40 /* Application */,
 				5BD9C18E2DF6036300A80B40 /* App */,
 				5BD9C12E2DF1B21400A80B40 /* Extensions */,
@@ -108,6 +123,7 @@
 				5BD9C11B2DF1AB0600A80B40 /* LaunchScreen.storyboard */,
 				5BD9C1192DF1AB0600A80B40 /* Info.plist */,
 				5BD9C1362DF1BEBF00A80B40 /* Preferences */,
+				5BD9C1AA2DF6D3C500A80B40 /* HomeFlow */,
 				5BD9C1352DF1BB0F00A80B40 /* LoginFlow */,
 				5BD9C1A32DF61ABA00A80B40 /* TabbarFlow */,
 			);
@@ -146,6 +162,7 @@
 		5BD9C12E2DF1B21400A80B40 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5BD9C1C42DF82DA600A80B40 /* Double.swift */,
 				5BD9C1752DF5F0DC00A80B40 /* UIView.swift */,
 				5BD9C1632DF2349D00A80B40 /* UIAlertController.swift */,
 				5BD9C14C2DF1CAE900A80B40 /* UIControl.swift */,
@@ -186,6 +203,7 @@
 		5BD9C15B2DF1D4D200A80B40 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				5BD9C1BB2DF77F7400A80B40 /* LargeAreaButton.swift */,
 				5BD9C15C2DF1D4E600A80B40 /* TextField.swift */,
 			);
 			path = Helpers;
@@ -283,7 +301,6 @@
 			children = (
 				5BD9C1A42DF61E5800A80B40 /* View */,
 				5BD9C1A52DF61E6100A80B40 /* Coordinator */,
-				5BD9C1AA2DF6D3C500A80B40 /* HomeFlow */,
 			);
 			path = TabbarFlow;
 			sourceTree = "<group>";
@@ -307,6 +324,8 @@
 		5BD9C1AA2DF6D3C500A80B40 /* HomeFlow */ = {
 			isa = PBXGroup;
 			children = (
+				5BD9C1B42DF74E8600A80B40 /* Data */,
+				5BD9C1B52DF74E8B00A80B40 /* Domain */,
 				5BD9C1AD2DF71A6100A80B40 /* Presentation */,
 			);
 			path = HomeFlow;
@@ -323,10 +342,60 @@
 		5BD9C1AE2DF71A6C00A80B40 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5BD9C1B92DF7669E00A80B40 /* HomeCoinTVCell.swift */,
 				5BD9C1AF2DF71A8300A80B40 /* HomeHeaderTVCell.swift */,
 				5BD9C1AB2DF6D3FD00A80B40 /* HomeViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5BD9C1B12DF7231D00A80B40 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1B22DF7233500A80B40 /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5BD9C1B42DF74E8600A80B40 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1C02DF82D0400A80B40 /* DTO */,
+				5BD9C1BD2DF82C9800A80B40 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5BD9C1B52DF74E8B00A80B40 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1B62DF74FAB00A80B40 /* Entity */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		5BD9C1B62DF74FAB00A80B40 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1B72DF74FB700A80B40 /* Coin.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5BD9C1BD2DF82C9800A80B40 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1BE2DF82CAB00A80B40 /* MessariCryptoRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		5BD9C1C02DF82D0400A80B40 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1C12DF82D5900A80B40 /* MessariDecodableDTO.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,11 +436,11 @@
 				};
 			};
 			buildConfigurationList = 5BD9C0FA2DF1AAA700A80B40 /* Build configuration list for PBXProject "Wallet" */;
-			developmentRegion = en;
+			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				ru,
 			);
 			mainGroup = 5BD9C0F62DF1AAA700A80B40;
 			minimizedProjectReferenceProxies = 1;
@@ -405,6 +474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BD9C1C52DF82DA700A80B40 /* Double.swift in Sources */,
 				5BD9C1882DF5FC5900A80B40 /* HardcodedAuthRepository.swift in Sources */,
 				5BD9C1382DF1BF1B00A80B40 /* UserDefaultsWrapper.swift in Sources */,
 				5BD9C15D2DF1D4E800A80B40 /* TextField.swift in Sources */,
@@ -416,14 +486,19 @@
 				5BD9C1902DF6060E00A80B40 /* Coordinator.swift in Sources */,
 				5BD9C1842DF5FBD100A80B40 /* AuthenticateUseCase.swift in Sources */,
 				5BD9C1302DF1B25600A80B40 /* UIFont.swift in Sources */,
+				5BD9C1BA2DF766AF00A80B40 /* HomeCoinTVCell.swift in Sources */,
 				5BD9C1342DF1B75F00A80B40 /* Colors.swift in Sources */,
+				5BD9C1BF2DF82CAD00A80B40 /* MessariCryptoRepository.swift in Sources */,
 				5BD9C1AC2DF6D3FD00A80B40 /* HomeViewController.swift in Sources */,
+				5BD9C1C22DF82D5B00A80B40 /* MessariDecodableDTO.swift in Sources */,
 				5BD9C1A72DF61E7600A80B40 /* TabbarCoordinator.swift in Sources */,
 				5BD9C18D2DF6020000A80B40 /* Protocols.swift in Sources */,
+				5BD9C1B82DF74FBC00A80B40 /* Coin.swift in Sources */,
 				5BD9C17D2DF5FB4600A80B40 /* AuthError.swift in Sources */,
 				5BD9C17B2DF5FAF100A80B40 /* LoginCredentials.swift in Sources */,
 				5BD9C14A2DF1C13E00A80B40 /* LoginViewTextField.swift in Sources */,
 				5BD9C1222DF1AB0600A80B40 /* AppDelegate.swift in Sources */,
+				5BD9C1BC2DF77F7C00A80B40 /* LargeAreaButton.swift in Sources */,
 				5BD9C1232DF1AB0600A80B40 /* SceneDelegate.swift in Sources */,
 				5BD9C1242DF1AB0600A80B40 /* LoginViewController.swift in Sources */,
 				5BD9C1A22DF60AA700A80B40 /* LoginCoordinator.swift in Sources */,
@@ -431,6 +506,7 @@
 				5BD9C1802DF5FB9300A80B40 /* AuthRepository.swift in Sources */,
 				5BD9C13A2DF1BF5A00A80B40 /* Preferences.swift in Sources */,
 				5BD9C1322DF1B6F700A80B40 /* UIColor.swift in Sources */,
+				5BD9C1B32DF7233B00A80B40 /* Network.swift in Sources */,
 				5BD9C1642DF2349E00A80B40 /* UIAlertController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,8 +537,8 @@
 				INFOPLIST_FILE = Wallet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -489,8 +565,8 @@
 				INFOPLIST_FILE = Wallet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
