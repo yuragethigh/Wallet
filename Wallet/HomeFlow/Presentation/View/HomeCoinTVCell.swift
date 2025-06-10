@@ -77,6 +77,7 @@ final class HomeCoinTVCell: UITableViewCell {
     private lazy var priceImageChangeLabelStack: UIStackView = {
         $0.axis = .vertical
         $0.spacing = 3
+        $0.alignment = .trailing
         return $0
     }(UIStackView(arrangedSubviews: [priceLabel, imageChangeLabelStack]))
     
@@ -145,7 +146,7 @@ final class HomeCoinTVCell: UITableViewCell {
     
     //MARK: - Public methods
     
-    func congigure(coin: HomeModel.Coin?) {
+    func congigure(coin: HomeViewController.HomeModel.Coin?) {
         if let coin {
             spinner.stopAnimating()
             imageViewCoin.isHidden = false

@@ -12,7 +12,6 @@ struct Coin {
     let name: String
     let symbol: String
     let price: Double
-    let change1h: Double
     let change24h: Double
 }
 

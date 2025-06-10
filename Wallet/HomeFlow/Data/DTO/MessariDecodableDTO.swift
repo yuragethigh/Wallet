@@ -15,7 +15,6 @@ struct MessariDecodableDTO: Decodable {
         
         struct MarketData: Decodable {
             let priceUsd: Double
-            let percentChangeUsdLast1Hour: Double
             let percentChangeUsdLast24Hours: Double
         }
     }
@@ -28,7 +27,6 @@ extension MessariDecodableDTO {
             name: data.name,
             symbol: data.symbol.uppercased(),
             price: data.marketData.priceUsd,
-            change1h: data.marketData.percentChangeUsdLast1Hour,
             change24h: data.marketData.percentChangeUsdLast24Hours
         )
     }

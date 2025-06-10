@@ -46,6 +46,11 @@
 		5BD9C1BF2DF82CAD00A80B40 /* MessariCryptoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1BE2DF82CAB00A80B40 /* MessariCryptoRepository.swift */; };
 		5BD9C1C22DF82D5B00A80B40 /* MessariDecodableDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1C12DF82D5900A80B40 /* MessariDecodableDTO.swift */; };
 		5BD9C1C52DF82DA700A80B40 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1C42DF82DA600A80B40 /* Double.swift */; };
+		5BD9C1C82DF830DF00A80B40 /* NavigationbarModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1C72DF830C800A80B40 /* NavigationbarModalView.swift */; };
+		5BD9C1CB2DF87B9A00A80B40 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1CA2DF87B9800A80B40 /* HomeInteractor.swift */; };
+		5BD9C1CF2DF87C0300A80B40 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1CE2DF87C0200A80B40 /* HomePresenter.swift */; };
+		5BD9C1D22DF87D3F00A80B40 /* HomeViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1D12DF87D3E00A80B40 /* HomeViewController + Ext.swift */; };
+		5BD9C1D52DF87ED100A80B40 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1D42DF87ECD00A80B40 /* Protocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +95,11 @@
 		5BD9C1BE2DF82CAB00A80B40 /* MessariCryptoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessariCryptoRepository.swift; sourceTree = "<group>"; };
 		5BD9C1C12DF82D5900A80B40 /* MessariDecodableDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessariDecodableDTO.swift; sourceTree = "<group>"; };
 		5BD9C1C42DF82DA600A80B40 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		5BD9C1C72DF830C800A80B40 /* NavigationbarModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationbarModalView.swift; sourceTree = "<group>"; };
+		5BD9C1CA2DF87B9800A80B40 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		5BD9C1CE2DF87C0200A80B40 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		5BD9C1D12DF87D3E00A80B40 /* HomeViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController + Ext.swift"; sourceTree = "<group>"; };
+		5BD9C1D42DF87ECD00A80B40 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +126,7 @@
 			children = (
 				5BD9C1B12DF7231D00A80B40 /* Network */,
 				5BD9C1252DF1AB0C00A80B40 /* Application */,
-				5BD9C18E2DF6036300A80B40 /* App */,
+				5BD9C18E2DF6036300A80B40 /* AppCoordinator */,
 				5BD9C12E2DF1B21400A80B40 /* Extensions */,
 				5BD9C1262DF1B12600A80B40 /* Resources */,
 				5BD9C15B2DF1D4D200A80B40 /* Helpers */,
@@ -194,6 +204,7 @@
 		5BD9C1482DF1C12600A80B40 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5BD9C1D12DF87D3E00A80B40 /* HomeViewController + Ext.swift */,
 				5BD9C11D2DF1AB0600A80B40 /* LoginViewController.swift */,
 				5BD9C1492DF1C13600A80B40 /* LoginViewTextField.swift */,
 			);
@@ -279,13 +290,13 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		5BD9C18E2DF6036300A80B40 /* App */ = {
+		5BD9C18E2DF6036300A80B40 /* AppCoordinator */ = {
 			isa = PBXGroup;
 			children = (
 				5BD9C18F2DF6060800A80B40 /* Coordinator.swift */,
 				5BD9C1912DF606AB00A80B40 /* AppCoordinator.swift */,
 			);
-			path = App;
+			path = AppCoordinator;
 			sourceTree = "<group>";
 		};
 		5BD9C1A02DF60A6C00A80B40 /* Coordinator */ = {
@@ -334,6 +345,9 @@
 		5BD9C1AD2DF71A6100A80B40 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				5BD9C1D32DF87EC100A80B40 /* Protocols */,
+				5BD9C1CD2DF87BE200A80B40 /* Presenter */,
+				5BD9C1C92DF87B8400A80B40 /* Interactor */,
 				5BD9C1AE2DF71A6C00A80B40 /* View */,
 			);
 			path = Presentation;
@@ -342,6 +356,7 @@
 		5BD9C1AE2DF71A6C00A80B40 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5BD9C1C62DF830BE00A80B40 /* Modal */,
 				5BD9C1B92DF7669E00A80B40 /* HomeCoinTVCell.swift */,
 				5BD9C1AF2DF71A8300A80B40 /* HomeHeaderTVCell.swift */,
 				5BD9C1AB2DF6D3FD00A80B40 /* HomeViewController.swift */,
@@ -396,6 +411,38 @@
 				5BD9C1C12DF82D5900A80B40 /* MessariDecodableDTO.swift */,
 			);
 			path = DTO;
+			sourceTree = "<group>";
+		};
+		5BD9C1C62DF830BE00A80B40 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1C72DF830C800A80B40 /* NavigationbarModalView.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		5BD9C1C92DF87B8400A80B40 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1CA2DF87B9800A80B40 /* HomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5BD9C1CD2DF87BE200A80B40 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1CE2DF87C0200A80B40 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5BD9C1D32DF87EC100A80B40 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1D42DF87ECD00A80B40 /* Protocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -474,13 +521,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BD9C1C82DF830DF00A80B40 /* NavigationbarModalView.swift in Sources */,
 				5BD9C1C52DF82DA700A80B40 /* Double.swift in Sources */,
 				5BD9C1882DF5FC5900A80B40 /* HardcodedAuthRepository.swift in Sources */,
 				5BD9C1382DF1BF1B00A80B40 /* UserDefaultsWrapper.swift in Sources */,
+				5BD9C1D22DF87D3F00A80B40 /* HomeViewController + Ext.swift in Sources */,
 				5BD9C15D2DF1D4E800A80B40 /* TextField.swift in Sources */,
 				5BD9C1A92DF61F4500A80B40 /* TabbarController.swift in Sources */,
 				5BD9C14D2DF1CAEB00A80B40 /* UIControl.swift in Sources */,
 				5BD9C18B2DF5FD0800A80B40 /* LoginPresenter.swift in Sources */,
+				5BD9C1D52DF87ED100A80B40 /* Protocols.swift in Sources */,
 				5BD9C1922DF606B200A80B40 /* AppCoordinator.swift in Sources */,
 				5BD9C1B02DF71A8600A80B40 /* HomeHeaderTVCell.swift in Sources */,
 				5BD9C1902DF6060E00A80B40 /* Coordinator.swift in Sources */,
@@ -488,7 +538,9 @@
 				5BD9C1302DF1B25600A80B40 /* UIFont.swift in Sources */,
 				5BD9C1BA2DF766AF00A80B40 /* HomeCoinTVCell.swift in Sources */,
 				5BD9C1342DF1B75F00A80B40 /* Colors.swift in Sources */,
+				5BD9C1CB2DF87B9A00A80B40 /* HomeInteractor.swift in Sources */,
 				5BD9C1BF2DF82CAD00A80B40 /* MessariCryptoRepository.swift in Sources */,
+				5BD9C1CF2DF87C0300A80B40 /* HomePresenter.swift in Sources */,
 				5BD9C1AC2DF6D3FD00A80B40 /* HomeViewController.swift in Sources */,
 				5BD9C1C22DF82D5B00A80B40 /* MessariDecodableDTO.swift in Sources */,
 				5BD9C1A72DF61E7600A80B40 /* TabbarCoordinator.swift in Sources */,

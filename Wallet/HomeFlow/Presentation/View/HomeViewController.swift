@@ -30,12 +30,26 @@ final class HomeViewController: UIViewController {
         return $0
     }(UILabel())
     
+    
+    private lazy var navbarModalCV: ModalMenuView = {
+        $0.delegate = self
+        $0.configure(items: NavbarMenuItem.allCases)
+        return $0
+    }(ModalMenuView())
+    
+    private lazy var sortModalCV: ModalMenuView = {
+        $0.delegate = self
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.configure(items: SortMenuItem.allCases)
+        return $0
+    }(ModalMenuView())
+
+        
     // MARK: - Dependencies
     
     private let interactor: HomeBusinessLogic
         
     private var viewModel: HomeModel?
-
     
     // MARK: - Initializers
     
@@ -61,13 +75,19 @@ final class HomeViewController: UIViewController {
 
     private func setupView() {
         view.addSubview(tableView)
+        view.addSubview(navbarModalCV)
+
         view.turnoffTAMIC()
         
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            navbarModalCV.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
+            navbarModalCV.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -29),
+
         ])
     }
     
@@ -79,9 +99,40 @@ final class HomeViewController: UIViewController {
     //MARK: - User action
     
     @objc private func moreButtonTapped() {
-        viewModel = nil
-        updateSectionCoin()
-        interactor.refresh()
+        navbarModalCV.isShow ? navbarModalCV.dismiss() : navbarModalCV.present()
+    }
+    
+    private func presentSortModal(y: CGFloat) {
+        view.addSubview(sortModalCV)
+        NSLayoutConstraint.activate([
+            sortModalCV.topAnchor.constraint(equalTo: view.topAnchor, constant: y),
+            sortModalCV.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -29)
+        ])
+        sortModalCV.present()
+    }
+    
+    private func closeSortModal() {
+        sortModalCV.dismiss()
+        sortModalCV.removeFromSuperview()
+    }
+    
+    private func headerCellDidTapSort(_ cell: UITableViewCell) {
+        guard let ip = tableView.indexPath(for: cell) else { return }
+
+        let cellRectInTable = tableView.rectForRow(at: ip)
+        let cellRectOnView  = tableView.convert(cellRectInTable, to: view)
+
+        let y = cellRectOnView.maxY
+        closeSortModal()
+        presentSortModal(y: y)
+    }
+
+
+    //MARK: - Private methods
+    
+    private func closeModals() {
+        navbarModalCV.dismiss()
+        closeSortModal()
     }
     
     private func updateSectionCoin() {
@@ -91,11 +142,39 @@ final class HomeViewController: UIViewController {
     }
 }
 
-enum HomeViewSection: CaseIterable {
-    case header, coins
+//MARK: - ModalMenuViewDelegate
+extension HomeViewController: ModalMenuViewDelegate {
+    func modalMenu(_ menu: ModalMenuView, didSelect item: ModalMenuItem) {
+        switch item {
+        case let main as NavbarMenuItem:
+            switch main {
+            case .reload:   reload()
+            case .logout:   logout()
+            }
+        case let profile as SortMenuItem:
+            switch profile {
+            case .none:  interactor.sort(sortType: .none)
+            case .up24:  interactor.sort(sortType: .up24)
+            case .down24: interactor.sort(sortType: .down24)
+            }
+        default: break
+        }
+        closeModals()
+    }
+
+    func reload() {
+        viewModel = nil
+        updateSectionCoin()
+        interactor.refresh()
+    }
+    
+    func logout() {
+        //TODO: - logout
+    }
 }
 
 
+//MARK: - UITableViewDelegate, UITableViewDataSource
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int { HomeViewSection.allCases.count }
 
@@ -119,12 +198,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: HomeHeaderTVCell.id) as! HomeHeaderTVCell
             cell.headerAction = { [weak self] action in
                 switch action {
-                case .leartMore: print("Learn more")
+                case .leartMore:
+                    print("Learn more")
                 case .sort:
-                    if let viewModel = self?.viewModel {
-                        self?.interactor.sort(byAscending: viewModel.isAscending ? false : true )
-
-                    }
+                    self?.headerCellDidTapSort(cell)
                 }
             }
             return cell
@@ -137,13 +214,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 return cell
             } else {
                 cell.congigure(coin: nil)
-
                 return cell
             }
         }
     }
 }
 
+//MARK: - HomeDisplayLogic Presenter -> VC
 extension HomeViewController: HomeDisplayLogic {
     func display(viewModel: HomeModel) {
         self.viewModel = viewModel
@@ -151,8 +228,10 @@ extension HomeViewController: HomeDisplayLogic {
     }
 }
 
+//MARK: - UIScrollViewDelegate
 extension HomeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        closeModals()
         guard let header = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? HomeHeaderTVCell else { return }
         let offsetY = scrollView.contentOffset.y
         header.stretch(for: offsetY)
@@ -161,117 +240,6 @@ extension HomeViewController: UIScrollViewDelegate {
 
 
 
-
-struct HomeModel {
-    struct Coin {
-        let name: String
-        let symbol: String
-        let price: String
-        let change: String
-        let icon: UIImage
-    }
-    let coin: [Coin]
-    let isAscending: Bool
-}
-
-
-protocol HomeBusinessLogic: AnyObject {
-    func viewDidLoad()
-    func refresh()
-    func sort(byAscending: Bool)
-}
-
-
-
-final class HomeInteractor: HomeBusinessLogic {
-    
-    private let repo: CryptoRepository
-    private let presenter: HomePresentationLogic
-    private let symbols = [
-        "btc","eth","tron","luna","polkadot",
-        "dogecoin","tether","stellar","cardano","xrp"
-    ]
-    private var coins = [Coin]()
-    private var ascending = true
-    
-    init(
-        repo: CryptoRepository,
-        presenter: HomePresentationLogic
-    ) {
-        self.repo = repo
-        self.presenter = presenter
-    }
-    
-    //MARK: - Public
-    
-    func viewDidLoad() {
-        load()
-    }
-    
-    func refresh(){
-        coins.removeAll()
-        load()
-    }
-    
-    func sort(byAscending: Bool) {
-        ascending = byAscending
-        present(coins)
-    }
-    
-    //MARK: - Private
-
-    private func load() {
-        repo.loadMetrics(for: symbols) { [weak self] result in
-            switch result {
-            case .success(let list):
-                self?.coins = list
-                self?.present(list)
-                
-            case .failure(_):
-//                print(err)
-                //TODO: - handle error
-                break
-            }
-        }
-    }
-    
-    private func present(_ list: [Coin]) {
-        let sorted = list.sorted {
-            ascending ? $0.change24h < $1.change24h
-                      : $0.change24h > $1.change24h
-        }
-        presenter.present(coins: sorted, ascending: ascending)
-    }
-}
-
-protocol HomePresentationLogic: AnyObject {
-    func present(coins: [Coin], ascending: Bool)
-}
-
-final class HomePresenter: HomePresentationLogic {
-    
-    weak var view: HomeDisplayLogic?
-    
-    func present(coins: [Coin], ascending: Bool) {
-        
-        let coin = coins.map {
-            HomeModel.Coin(
-                name: $0.name,
-                symbol: $0.symbol,
-                price: $0.price.currencyFormat(),
-                change: $0.change24h.percentFormat(),
-                icon: $0.change24h >= 0 ? .up : .down
-            )
-        }
-        view?.display(viewModel: .init(coin: coin, isAscending: ascending))
-    }
-}
-
-
-
-protocol HomeDisplayLogic: AnyObject {
-    func display(viewModel: HomeModel)
-}
 
 struct HomeViewControllerFactory {
     static func make() -> UIViewController {

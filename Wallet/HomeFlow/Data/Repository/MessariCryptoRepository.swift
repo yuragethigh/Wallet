@@ -60,7 +60,7 @@ final class MessariCryptoRepository: CryptoRepository {
             }
         }
         
-        group.notify(queue: .main) {
+        group.notify(queue: .global()) {
             if let err = error {
                 completion(.failure(err))
             } else {
