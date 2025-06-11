@@ -32,6 +32,13 @@ final class HomeInteractor: HomeBusinessLogic {
         self.presenter = presenter
     }
     
+    deinit {
+#if DEBUG
+        print("Deinit - \(self)")
+#endif
+    }
+
+    
     //MARK: - Public
     
     func viewDidLoad() {

@@ -10,12 +10,19 @@ import Foundation
 final class LoginPresenterImpl: LoginPresenter {
     
     private weak var view: LoginViewDelegate?
-    weak var output: LoginPresenterOutput?
+    weak var output: LoginCoordinatorOutput?
     private let authenticate: AuthenticateUseCase
     
     init(authenticate: AuthenticateUseCase) {
         self.authenticate = authenticate
     }
+    
+    deinit {
+#if DEBUG
+        print("Deinit - \(self)")
+#endif
+    }
+
     
     func bindView(_ view: LoginViewDelegate) {
         self.view = view

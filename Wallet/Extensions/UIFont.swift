@@ -7,7 +7,7 @@
 import UIKit
 
 extension UIFont {
-    static func poppins(weight: Weight, size: CGFloat) -> UIFont {
+    static func poppins(weight: Weight, size: CGFloat) -> UIFont? {
         
         var fontName = "Poppins-"
         
@@ -20,6 +20,6 @@ extension UIFont {
             fatalError("This font doesn't exist")
         }
         
-        return UIFont(name: fontName, size: size)!
+        return UIFont(name: fontName, size: size)
     }
 }

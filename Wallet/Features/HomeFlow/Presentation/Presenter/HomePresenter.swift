@@ -14,7 +14,7 @@ final class HomePresenter: HomePresentationLogic {
     func present(coins: [Coin], sortType: SortMenuItem) {
         
         let coin = coins.map {
-            HomeModel.Coin(
+            HomeViewController.HomeModel.Coin(
                 name: $0.name,
                 symbol: $0.symbol,
                 price: $0.price.currencyFormat(),
@@ -26,5 +26,12 @@ final class HomePresenter: HomePresentationLogic {
             self.view?.display(viewModel: .init(coin: coin, sortType: sortType))
         }
     }
+    
+    deinit {
+#if DEBUG
+        print("Deinit - \(self)")
+#endif
+    }
+
 }
 

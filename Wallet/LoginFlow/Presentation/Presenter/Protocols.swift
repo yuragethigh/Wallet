@@ -17,7 +17,7 @@ protocol LoginPresenter {
 
 // Presenter -> Coordinator
 
-protocol LoginPresenterOutput: AnyObject {
+protocol LoginCoordinatorOutput: AnyObject {
     func loginDidFinish()
 }
 

@@ -109,6 +109,15 @@ final class HomeCoinTVCell: UITableViewCell {
         changeLabel.text = nil
     }
     
+    override func systemLayoutSizeFitting(
+        _ targetSize: CGSize,
+        withHorizontalFittingPriority h: UILayoutPriority,
+        verticalFittingPriority v: UILayoutPriority
+    ) -> CGSize {
+        .init(width: targetSize.width,height: 70)
+    }
+
+    
     // MARK: - Layout
     
     private func setupView() {
@@ -123,7 +132,6 @@ final class HomeCoinTVCell: UITableViewCell {
         
         contentView.turnoffTAMIC()
         NSLayoutConstraint.activate([
-            contentView.heightAnchor.constraint(equalToConstant: 70),
             spinner.topAnchor.constraint(equalTo: contentView.topAnchor),
             spinner.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             spinner.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
@@ -141,7 +149,6 @@ final class HomeCoinTVCell: UITableViewCell {
             priceImageChangeLabelStack.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
         
-        layoutIfNeeded()
     }
     
     //MARK: - Public methods
@@ -156,6 +163,7 @@ final class HomeCoinTVCell: UITableViewCell {
             imageViewArrow.image = coin.icon
             changeLabel.text = coin.change
         } else {
+            imageViewCoin.isHidden = true
             spinner.startAnimating()
         }
     }

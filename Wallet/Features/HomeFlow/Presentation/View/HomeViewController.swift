@@ -48,7 +48,7 @@ final class HomeViewController: UIViewController {
     // MARK: - Dependencies
     
     private let interactor: HomeBusinessLogic
-        
+    weak var coordinator: HomeCoordinatorOutput?
     private var viewModel: HomeModel?
     
     // MARK: - Initializers
@@ -60,6 +60,12 @@ final class HomeViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    deinit {
+        #if DEBUG
+        print("Deinit - \(self)")
+        #endif
     }
     
     // MARK: - Lifecycle
@@ -148,8 +154,8 @@ extension HomeViewController: ModalMenuViewDelegate {
         switch item {
         case let main as NavbarMenuItem:
             switch main {
-            case .reload:   reload()
-            case .logout:   logout()
+            case .reload: reload()
+            case .logout: coordinator?.logout()
             }
         case let profile as SortMenuItem:
             switch profile {
@@ -166,10 +172,6 @@ extension HomeViewController: ModalMenuViewDelegate {
         viewModel = nil
         updateSectionCoin()
         interactor.refresh()
-    }
-    
-    func logout() {
-        //TODO: - logout
     }
 }
 
@@ -218,6 +220,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch HomeViewSection.allCases[indexPath.section] {
+        case .header: break
+        case .coins: coordinator?.presentDetail()
+        }
+    }
 }
 
 //MARK: - HomeDisplayLogic Presenter -> VC
@@ -240,14 +249,14 @@ extension HomeViewController: UIScrollViewDelegate {
 
 
 
-
 struct HomeViewControllerFactory {
-    static func make() -> UIViewController {
+    static func make(coordinator: HomeCoordinatorOutput? = nil) -> UIViewController {
         let network = NetworkLayer()
         let messaryRepo = MessariCryptoRepository(network: network)
         let presenter = HomePresenter()
         let interactor = HomeInteractor(repo: messaryRepo, presenter: presenter)
         let controller = HomeViewController(interactor: interactor)
+        controller.coordinator = coordinator
         presenter.view = controller
         return controller
     }

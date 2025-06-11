@@ -168,8 +168,7 @@ final class LoginViewController: UIViewController {
 }
 
 
-// MARK: - LoginViewDelegate implement
-
+// MARK: - LoginViewDelegate
 extension LoginViewController: LoginViewDelegate {
     func setLoading(_ loading: Bool) {
         loginButton.isEnabled = !loading
@@ -177,18 +176,6 @@ extension LoginViewController: LoginViewDelegate {
     
     func showError(_ message: String) {
         errorAlert(message)
-    }
-}
-
-
-struct LoginModuleFactory {
-    static func make(output: LoginPresenterOutput? = nil) -> UIViewController {
-        let repository = HardcodedAuthRepository()
-        let useCase = AuthenticateUseCaseImpl(repository: repository)
-        let presenter = LoginPresenterImpl(authenticate: useCase)
-        presenter.output = output
-        let view = LoginViewController(presenter: presenter)
-        return view
     }
 }
 

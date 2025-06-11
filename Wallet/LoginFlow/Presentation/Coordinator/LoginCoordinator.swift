@@ -17,10 +17,17 @@ final class LoginCoordinator: Coordinator {
         let loginFlow = LoginModuleFactory.make(output: self)
         controller = loginFlow
     }
+    
+    deinit {
+#if DEBUG
+        print("Deinit - \(self)")
+#endif
+    }
+
 }
 
 
-extension LoginCoordinator: LoginPresenterOutput {
+extension LoginCoordinator: LoginCoordinatorOutput {
     func loginDidFinish() {
         didFinishFlow?()
     }

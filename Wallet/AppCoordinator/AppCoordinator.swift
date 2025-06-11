@@ -32,10 +32,11 @@ final class AppCoordinator: Coordinator {
         login.start()
         childs.append(login)
         switchFlow(login.controller)
-        login.didFinishFlow = { [weak self] in
+        login.didFinishFlow = { [weak self, weak login] in
             self?.preferences.isAuthorized = true
-            self?.startTabbar()
             self?.childs.removeAll(where: { $0 === login })
+            self?.startTabbar()
+
         }
     }
     
@@ -43,11 +44,11 @@ final class AppCoordinator: Coordinator {
         let tabbarCoordinator = TabbarCoordinator()
         tabbarCoordinator.start()
         childs.append(tabbarCoordinator)
-        switchFlow(tabbarCoordinator.controller)
-        tabbarCoordinator.didFinishFlow = { [weak self] in
+        switchFlow(tabbarCoordinator.tabbarController)
+        tabbarCoordinator.didFinishFlow = { [weak self, weak tabbarCoordinator] in
             self?.preferences.isAuthorized = false
-            self?.startLogin()
             self?.childs.removeAll(where: { $0 === tabbarCoordinator })
+            self?.startLogin()
         }
     }
 }

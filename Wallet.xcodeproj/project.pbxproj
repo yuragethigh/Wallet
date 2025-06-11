@@ -50,7 +50,9 @@
 		5BD9C1CB2DF87B9A00A80B40 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1CA2DF87B9800A80B40 /* HomeInteractor.swift */; };
 		5BD9C1CF2DF87C0300A80B40 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1CE2DF87C0200A80B40 /* HomePresenter.swift */; };
 		5BD9C1D22DF87D3F00A80B40 /* HomeViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1D12DF87D3E00A80B40 /* HomeViewController + Ext.swift */; };
-		5BD9C1D52DF87ED100A80B40 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1D42DF87ECD00A80B40 /* Protocols.swift */; };
+		5BD9C1D52DF87ED100A80B40 /* HomeLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1D42DF87ECD00A80B40 /* HomeLogic.swift */; };
+		5BD9C1D82DF882BB00A80B40 /* LoginModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1D72DF882B400A80B40 /* LoginModuleFactory.swift */; };
+		5BD9C1DA2DF9735A00A80B40 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1D92DF9735900A80B40 /* HomeCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,7 +101,9 @@
 		5BD9C1CA2DF87B9800A80B40 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		5BD9C1CE2DF87C0200A80B40 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		5BD9C1D12DF87D3E00A80B40 /* HomeViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController + Ext.swift"; sourceTree = "<group>"; };
-		5BD9C1D42DF87ECD00A80B40 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		5BD9C1D42DF87ECD00A80B40 /* HomeLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLogic.swift; sourceTree = "<group>"; };
+		5BD9C1D72DF882B400A80B40 /* LoginModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleFactory.swift; sourceTree = "<group>"; };
+		5BD9C1D92DF9735900A80B40 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +137,7 @@
 				5BD9C11B2DF1AB0600A80B40 /* LaunchScreen.storyboard */,
 				5BD9C1192DF1AB0600A80B40 /* Info.plist */,
 				5BD9C1362DF1BEBF00A80B40 /* Preferences */,
-				5BD9C1AA2DF6D3C500A80B40 /* HomeFlow */,
+				5BD9C1DB2DF9760C00A80B40 /* Features */,
 				5BD9C1352DF1BB0F00A80B40 /* LoginFlow */,
 				5BD9C1A32DF61ABA00A80B40 /* TabbarFlow */,
 			);
@@ -204,7 +208,6 @@
 		5BD9C1482DF1C12600A80B40 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5BD9C1D12DF87D3E00A80B40 /* HomeViewController + Ext.swift */,
 				5BD9C11D2DF1AB0600A80B40 /* LoginViewController.swift */,
 				5BD9C1492DF1C13600A80B40 /* LoginViewTextField.swift */,
 			);
@@ -223,6 +226,7 @@
 		5BD9C1772DF5F92B00A80B40 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				5BD9C1D72DF882B400A80B40 /* LoginModuleFactory.swift */,
 				5BD9C1A02DF60A6C00A80B40 /* Coordinator */,
 				5BD9C1892DF5FCFA00A80B40 /* Presenter */,
 				5BD9C1482DF1C12600A80B40 /* View */,
@@ -310,31 +314,16 @@
 		5BD9C1A32DF61ABA00A80B40 /* TabbarFlow */ = {
 			isa = PBXGroup;
 			children = (
-				5BD9C1A42DF61E5800A80B40 /* View */,
-				5BD9C1A52DF61E6100A80B40 /* Coordinator */,
-			);
-			path = TabbarFlow;
-			sourceTree = "<group>";
-		};
-		5BD9C1A42DF61E5800A80B40 /* View */ = {
-			isa = PBXGroup;
-			children = (
 				5BD9C1A82DF61F3A00A80B40 /* TabbarController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		5BD9C1A52DF61E6100A80B40 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
 				5BD9C1A62DF61E6E00A80B40 /* TabbarCoordinator.swift */,
 			);
-			path = Coordinator;
+			path = TabbarFlow;
 			sourceTree = "<group>";
 		};
 		5BD9C1AA2DF6D3C500A80B40 /* HomeFlow */ = {
 			isa = PBXGroup;
 			children = (
+				5BD9C1D92DF9735900A80B40 /* HomeCoordinator.swift */,
 				5BD9C1B42DF74E8600A80B40 /* Data */,
 				5BD9C1B52DF74E8B00A80B40 /* Domain */,
 				5BD9C1AD2DF71A6100A80B40 /* Presentation */,
@@ -345,7 +334,7 @@
 		5BD9C1AD2DF71A6100A80B40 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				5BD9C1D32DF87EC100A80B40 /* Protocols */,
+				5BD9C1D32DF87EC100A80B40 /* HomeLogic */,
 				5BD9C1CD2DF87BE200A80B40 /* Presenter */,
 				5BD9C1C92DF87B8400A80B40 /* Interactor */,
 				5BD9C1AE2DF71A6C00A80B40 /* View */,
@@ -356,10 +345,10 @@
 		5BD9C1AE2DF71A6C00A80B40 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5BD9C1D62DF8824D00A80B40 /* Cells */,
 				5BD9C1C62DF830BE00A80B40 /* Modal */,
-				5BD9C1B92DF7669E00A80B40 /* HomeCoinTVCell.swift */,
-				5BD9C1AF2DF71A8300A80B40 /* HomeHeaderTVCell.swift */,
 				5BD9C1AB2DF6D3FD00A80B40 /* HomeViewController.swift */,
+				5BD9C1D12DF87D3E00A80B40 /* HomeViewController + Ext.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -437,12 +426,37 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		5BD9C1D32DF87EC100A80B40 /* Protocols */ = {
+		5BD9C1D32DF87EC100A80B40 /* HomeLogic */ = {
 			isa = PBXGroup;
 			children = (
-				5BD9C1D42DF87ECD00A80B40 /* Protocols.swift */,
+				5BD9C1D42DF87ECD00A80B40 /* HomeLogic.swift */,
 			);
-			path = Protocols;
+			path = HomeLogic;
+			sourceTree = "<group>";
+		};
+		5BD9C1D62DF8824D00A80B40 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1B92DF7669E00A80B40 /* HomeCoinTVCell.swift */,
+				5BD9C1AF2DF71A8300A80B40 /* HomeHeaderTVCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5BD9C1DB2DF9760C00A80B40 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9C1AA2DF6D3C500A80B40 /* HomeFlow */,
+				5BD9C1DC2DF9764100A80B40 /* Home+Detail */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		5BD9C1DC2DF9764100A80B40 /* Home+Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Home+Detail";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -530,7 +544,7 @@
 				5BD9C1A92DF61F4500A80B40 /* TabbarController.swift in Sources */,
 				5BD9C14D2DF1CAEB00A80B40 /* UIControl.swift in Sources */,
 				5BD9C18B2DF5FD0800A80B40 /* LoginPresenter.swift in Sources */,
-				5BD9C1D52DF87ED100A80B40 /* Protocols.swift in Sources */,
+				5BD9C1D52DF87ED100A80B40 /* HomeLogic.swift in Sources */,
 				5BD9C1922DF606B200A80B40 /* AppCoordinator.swift in Sources */,
 				5BD9C1B02DF71A8600A80B40 /* HomeHeaderTVCell.swift in Sources */,
 				5BD9C1902DF6060E00A80B40 /* Coordinator.swift in Sources */,
@@ -547,6 +561,7 @@
 				5BD9C18D2DF6020000A80B40 /* Protocols.swift in Sources */,
 				5BD9C1B82DF74FBC00A80B40 /* Coin.swift in Sources */,
 				5BD9C17D2DF5FB4600A80B40 /* AuthError.swift in Sources */,
+				5BD9C1D82DF882BB00A80B40 /* LoginModuleFactory.swift in Sources */,
 				5BD9C17B2DF5FAF100A80B40 /* LoginCredentials.swift in Sources */,
 				5BD9C14A2DF1C13E00A80B40 /* LoginViewTextField.swift in Sources */,
 				5BD9C1222DF1AB0600A80B40 /* AppDelegate.swift in Sources */,
@@ -557,6 +572,7 @@
 				5BD9C1762DF5F0DE00A80B40 /* UIView.swift in Sources */,
 				5BD9C1802DF5FB9300A80B40 /* AuthRepository.swift in Sources */,
 				5BD9C13A2DF1BF5A00A80B40 /* Preferences.swift in Sources */,
+				5BD9C1DA2DF9735A00A80B40 /* HomeCoordinator.swift in Sources */,
 				5BD9C1322DF1B6F700A80B40 /* UIColor.swift in Sources */,
 				5BD9C1B32DF7233B00A80B40 /* Network.swift in Sources */,
 				5BD9C1642DF2349E00A80B40 /* UIAlertController.swift in Sources */,
