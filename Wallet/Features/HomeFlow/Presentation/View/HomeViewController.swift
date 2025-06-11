@@ -47,13 +47,13 @@ final class HomeViewController: UIViewController {
         
     // MARK: - Dependencies
     
-    private let interactor: HomeBusinessLogic
+    private let interactor: HomeBusinessLogic & HomeDataProviding
     weak var coordinator: HomeCoordinatorOutput?
     private var viewModel: HomeModel?
     
     // MARK: - Initializers
     
-    init(interactor: HomeBusinessLogic) {
+    init(interactor: HomeBusinessLogic & HomeDataProviding) {
         self.interactor = interactor
         super.init(nibName: nil, bundle: nil)
     }
@@ -75,6 +75,12 @@ final class HomeViewController: UIViewController {
         interactor.viewDidLoad()
         setupView()
         setupNavigationBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setColor(backgroud: .colorFF9AB2, hideLine: true)
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
     
     // MARK: - Layout
@@ -168,7 +174,7 @@ extension HomeViewController: ModalMenuViewDelegate {
         closeModals()
     }
 
-    func reload() {
+   private func reload() {
         viewModel = nil
         updateSectionCoin()
         interactor.refresh()
@@ -210,7 +216,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
         case .coins:
             let cell = tableView.dequeueReusableCell(withIdentifier: HomeCoinTVCell.id) as! HomeCoinTVCell
-            if let viewModel {
+            if let viewModel, !viewModel.coin.isEmpty {
                 let coin = viewModel.coin[indexPath.row]
                 cell.congigure(coin: coin)
                 return cell
@@ -224,7 +230,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch HomeViewSection.allCases[indexPath.section] {
         case .header: break
-        case .coins: coordinator?.presentDetail()
+        case .coins:
+            if let viewModel, !viewModel.coin.isEmpty {
+                guard let coin = interactor.coin(at: indexPath.row) else { return }
+                coordinator?.presentDetail(model: coin)
+
+            }
         }
     }
 }

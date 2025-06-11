@@ -102,11 +102,11 @@ final class ModalMenuView: UIView {
 
     override var intrinsicContentSize: CGSize {
 
-        let font       = UIFont.poppins(weight: .medium, size: 18)
-        let longest    = items.map(\.title).max(by: { $0.count < $1.count })!
-        let textWidth  = (longest as NSString).size(withAttributes: [.font: font]).width
+        let font       = UIFont.poppins(weight: .medium, size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .medium)
+        let longest    = items.map(\.title).max(by: { $0.count < $1.count })
+        let textWidth  = (longest as? NSString)?.size(withAttributes: [.font: font]).width
 
-        let rowWidth = 24 + 8 + ceil(textWidth)
+        let rowWidth = 24 + 8 + ceil(textWidth ?? 0)
         let width    = rowWidth + collectionView.contentInset.left + collectionView.contentInset.right
 
         let rows      = CGFloat(items.count)

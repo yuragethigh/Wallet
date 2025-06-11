@@ -7,14 +7,6 @@
 
 import UIKit
 
-protocol HomeCoordinatorOutput: AnyObject {
-    func logout()
-    func presentDetail()
-}
-
-protocol DetailCoordinatorOutput: AnyObject {
-    func logoutFromDetail()
-}
 
 
 final class HomeCoordinator: Coordinator {
@@ -35,20 +27,31 @@ final class HomeCoordinator: Coordinator {
     }
 }
 
+// MARK: - Home‑screen -> HomeCoordinator
+
+protocol HomeCoordinatorOutput: AnyObject {
+    func logout()
+    func presentDetail(model: Coin)
+}
+
+
 extension HomeCoordinator: HomeCoordinatorOutput {
     func logout() {
         didRequestLogout?()
     }
     
-    func presentDetail() {
-        controller.pushViewController(UIViewController(), animated: true)
+    func presentDetail(model: Coin) {
+        let coinCoordinator = CoinCoordinator(navigation: controller, model: model)
+        coinCoordinator.start()
+        childs.append(coinCoordinator)
+        
+        coinCoordinator.didRequestLogout = { [weak self] in self?.didRequestLogout?() }
+        coinCoordinator.didFinish = { [weak self, weak coinCoordinator] in
+            guard let self, let coinCoordinator else { return }
+            self.childs.removeAll { $0 === coinCoordinator }
+        }
+
     }
 }
 
-
-extension HomeCoordinator: DetailCoordinatorOutput {
-    func logoutFromDetail() {
-        didRequestLogout?()
-    }
-}
 

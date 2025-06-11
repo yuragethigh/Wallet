@@ -13,8 +13,7 @@ final class HomeInteractor: HomeBusinessLogic {
     private let repo: CryptoRepository
     private let presenter: HomePresentationLogic
     private let symbols = [
-        "btc","eth","tron","luna","polkadot",
-        "dogecoin","tether","stellar","cardano","xrp"
+        "btc","eth","tron","luna","polkadot","dogecoin","tether","stellar","cardano","xrp"
     ]
     private var coins = [Coin]()
     private var sortType: SortMenuItem = .none
@@ -68,7 +67,6 @@ final class HomeInteractor: HomeBusinessLogic {
         repo.loadMetrics(for: symbols) { [weak self] result in
             switch result {
             case .success(let list):
-                self?.coins = list
                 self?.present(list)
                 
             case .failure(_):
@@ -91,7 +89,18 @@ final class HomeInteractor: HomeBusinessLogic {
                return $0.change24h > $1.change24h
             }
         }
+        coins = sorted
         presenter.present(coins: sorted, sortType: sortType)
     }
 }
 
+protocol HomeDataProviding: AnyObject {
+    func coin(at index: Int) -> Coin?
+}
+
+extension HomeInteractor: HomeDataProviding {
+    func coin(at index: Int) -> Coin? {
+        guard coins.indices.contains(index) else { return nil }
+        return coins[index]
+    }
+}

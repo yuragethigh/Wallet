@@ -25,7 +25,7 @@ extension MessariDecodableDTO {
         .init(
             id: data.id,
             name: data.name,
-            symbol: data.symbol.uppercased(),
+            symbol: data.symbol,
             price: data.marketData.priceUsd,
             change24h: data.marketData.percentChangeUsdLast24Hours
         )

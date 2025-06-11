@@ -15,7 +15,7 @@ extension HomeViewController {
             let symbol: String
             let price: String
             let change: String
-            let icon: UIImage
+            let icon: UIImage?
         }
         let coin: [Coin]
         let sortType: SortMenuItem
@@ -26,5 +26,9 @@ extension HomeViewController {
     enum HomeViewSection: CaseIterable {
         case header, coins
     }
+}
+
+extension HomeViewController: UIGestureRecognizerDelegate {
+    
 }
 

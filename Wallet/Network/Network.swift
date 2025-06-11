@@ -30,6 +30,10 @@ final class NetworkLayer: Network {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
     }
     
+    deinit {
+        print("Deinit - \(self)")
+    }
+    
     func fetch<T: Decodable>(
         from request: URLRequest,
         for type: T.Type,

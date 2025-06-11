@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BD1F9B42DF9C69D001526C5 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD1F9B32DF9C692001526C5 /* UINavigationController.swift */; };
+		5BD1F9B62DFA2082001526C5 /* CoinInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD1F9B52DFA207F001526C5 /* CoinInteractor.swift */; };
+		5BD1F9B82DFA209F001526C5 /* CoinPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD1F9B72DFA209D001526C5 /* CoinPresenter.swift */; };
+		5BD1F9BA2DFA20BA001526C5 /* CoinViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD1F9B92DFA20B8001526C5 /* CoinViewController + Ext.swift */; };
+		5BD1F9BC2DFA20FA001526C5 /* CoinViewLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD1F9BB2DFA20EF001526C5 /* CoinViewLogic.swift */; };
+		5BD1F9BF2DFA216D001526C5 /* CoinInfoTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD1F9BE2DFA216C001526C5 /* CoinInfoTVCell.swift */; };
+		5BD1F9C12DFA21B9001526C5 /* SwitcherTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD1F9C02DFA21B7001526C5 /* SwitcherTVCell.swift */; };
+		5BD1F9C32DFA2228001526C5 /* CoinCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD1F9C22DFA2227001526C5 /* CoinCoordinator.swift */; };
 		5BD9C11F2DF1AB0600A80B40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BD9C1182DF1AB0600A80B40 /* Assets.xcassets */; };
 		5BD9C1212DF1AB0600A80B40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD9C11B2DF1AB0600A80B40 /* LaunchScreen.storyboard */; };
 		5BD9C1222DF1AB0600A80B40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1172DF1AB0600A80B40 /* AppDelegate.swift */; };
@@ -53,9 +61,18 @@
 		5BD9C1D52DF87ED100A80B40 /* HomeLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1D42DF87ECD00A80B40 /* HomeLogic.swift */; };
 		5BD9C1D82DF882BB00A80B40 /* LoginModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1D72DF882B400A80B40 /* LoginModuleFactory.swift */; };
 		5BD9C1DA2DF9735A00A80B40 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1D92DF9735900A80B40 /* HomeCoordinator.swift */; };
+		5BD9C1DF2DF977A700A80B40 /* CoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1DE2DF9778B00A80B40 /* CoinViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5BD1F9B32DF9C692001526C5 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		5BD1F9B52DFA207F001526C5 /* CoinInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinInteractor.swift; sourceTree = "<group>"; };
+		5BD1F9B72DFA209D001526C5 /* CoinPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinPresenter.swift; sourceTree = "<group>"; };
+		5BD1F9B92DFA20B8001526C5 /* CoinViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoinViewController + Ext.swift"; sourceTree = "<group>"; };
+		5BD1F9BB2DFA20EF001526C5 /* CoinViewLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewLogic.swift; sourceTree = "<group>"; };
+		5BD1F9BE2DFA216C001526C5 /* CoinInfoTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinInfoTVCell.swift; sourceTree = "<group>"; };
+		5BD1F9C02DFA21B7001526C5 /* SwitcherTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitcherTVCell.swift; sourceTree = "<group>"; };
+		5BD1F9C22DFA2227001526C5 /* CoinCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCoordinator.swift; sourceTree = "<group>"; };
 		5BD9C1172DF1AB0600A80B40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BD9C1182DF1AB0600A80B40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BD9C1192DF1AB0600A80B40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,6 +121,7 @@
 		5BD9C1D42DF87ECD00A80B40 /* HomeLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLogic.swift; sourceTree = "<group>"; };
 		5BD9C1D72DF882B400A80B40 /* LoginModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleFactory.swift; sourceTree = "<group>"; };
 		5BD9C1D92DF9735900A80B40 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		5BD9C1DE2DF9778B00A80B40 /* CoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +135,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BD1F9BD2DFA215C001526C5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5BD1F9C02DFA21B7001526C5 /* SwitcherTVCell.swift */,
+				5BD1F9BE2DFA216C001526C5 /* CoinInfoTVCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		5BD9C0F62DF1AAA700A80B40 = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +203,7 @@
 		5BD9C12E2DF1B21400A80B40 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5BD1F9B32DF9C692001526C5 /* UINavigationController.swift */,
 				5BD9C1C42DF82DA600A80B40 /* Double.swift */,
 				5BD9C1752DF5F0DC00A80B40 /* UIView.swift */,
 				5BD9C1632DF2349D00A80B40 /* UIAlertController.swift */,
@@ -447,16 +475,31 @@
 			isa = PBXGroup;
 			children = (
 				5BD9C1AA2DF6D3C500A80B40 /* HomeFlow */,
-				5BD9C1DC2DF9764100A80B40 /* Home+Detail */,
+				5BD9C1DC2DF9764100A80B40 /* CoinViewController */,
 			);
 			path = Features;
 			sourceTree = "<group>";
 		};
-		5BD9C1DC2DF9764100A80B40 /* Home+Detail */ = {
+		5BD9C1DC2DF9764100A80B40 /* CoinViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5BD9C1DD2DF9777A00A80B40 /* Presentation */,
 			);
-			path = "Home+Detail";
+			path = CoinViewController;
+			sourceTree = "<group>";
+		};
+		5BD9C1DD2DF9777A00A80B40 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				5BD1F9C22DFA2227001526C5 /* CoinCoordinator.swift */,
+				5BD1F9BD2DFA215C001526C5 /* Cells */,
+				5BD1F9BB2DFA20EF001526C5 /* CoinViewLogic.swift */,
+				5BD1F9B92DFA20B8001526C5 /* CoinViewController + Ext.swift */,
+				5BD1F9B72DFA209D001526C5 /* CoinPresenter.swift */,
+				5BD1F9B52DFA207F001526C5 /* CoinInteractor.swift */,
+				5BD9C1DE2DF9778B00A80B40 /* CoinViewController.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -536,11 +579,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BD9C1C82DF830DF00A80B40 /* NavigationbarModalView.swift in Sources */,
+				5BD1F9C32DFA2228001526C5 /* CoinCoordinator.swift in Sources */,
 				5BD9C1C52DF82DA700A80B40 /* Double.swift in Sources */,
 				5BD9C1882DF5FC5900A80B40 /* HardcodedAuthRepository.swift in Sources */,
 				5BD9C1382DF1BF1B00A80B40 /* UserDefaultsWrapper.swift in Sources */,
 				5BD9C1D22DF87D3F00A80B40 /* HomeViewController + Ext.swift in Sources */,
 				5BD9C15D2DF1D4E800A80B40 /* TextField.swift in Sources */,
+				5BD1F9B82DFA209F001526C5 /* CoinPresenter.swift in Sources */,
 				5BD9C1A92DF61F4500A80B40 /* TabbarController.swift in Sources */,
 				5BD9C14D2DF1CAEB00A80B40 /* UIControl.swift in Sources */,
 				5BD9C18B2DF5FD0800A80B40 /* LoginPresenter.swift in Sources */,
@@ -548,21 +593,27 @@
 				5BD9C1922DF606B200A80B40 /* AppCoordinator.swift in Sources */,
 				5BD9C1B02DF71A8600A80B40 /* HomeHeaderTVCell.swift in Sources */,
 				5BD9C1902DF6060E00A80B40 /* Coordinator.swift in Sources */,
+				5BD1F9BF2DFA216D001526C5 /* CoinInfoTVCell.swift in Sources */,
 				5BD9C1842DF5FBD100A80B40 /* AuthenticateUseCase.swift in Sources */,
 				5BD9C1302DF1B25600A80B40 /* UIFont.swift in Sources */,
+				5BD1F9B42DF9C69D001526C5 /* UINavigationController.swift in Sources */,
 				5BD9C1BA2DF766AF00A80B40 /* HomeCoinTVCell.swift in Sources */,
+				5BD1F9BC2DFA20FA001526C5 /* CoinViewLogic.swift in Sources */,
 				5BD9C1342DF1B75F00A80B40 /* Colors.swift in Sources */,
 				5BD9C1CB2DF87B9A00A80B40 /* HomeInteractor.swift in Sources */,
 				5BD9C1BF2DF82CAD00A80B40 /* MessariCryptoRepository.swift in Sources */,
 				5BD9C1CF2DF87C0300A80B40 /* HomePresenter.swift in Sources */,
 				5BD9C1AC2DF6D3FD00A80B40 /* HomeViewController.swift in Sources */,
 				5BD9C1C22DF82D5B00A80B40 /* MessariDecodableDTO.swift in Sources */,
+				5BD1F9C12DFA21B9001526C5 /* SwitcherTVCell.swift in Sources */,
 				5BD9C1A72DF61E7600A80B40 /* TabbarCoordinator.swift in Sources */,
 				5BD9C18D2DF6020000A80B40 /* Protocols.swift in Sources */,
 				5BD9C1B82DF74FBC00A80B40 /* Coin.swift in Sources */,
 				5BD9C17D2DF5FB4600A80B40 /* AuthError.swift in Sources */,
+				5BD1F9B62DFA2082001526C5 /* CoinInteractor.swift in Sources */,
 				5BD9C1D82DF882BB00A80B40 /* LoginModuleFactory.swift in Sources */,
 				5BD9C17B2DF5FAF100A80B40 /* LoginCredentials.swift in Sources */,
+				5BD1F9BA2DFA20BA001526C5 /* CoinViewController + Ext.swift in Sources */,
 				5BD9C14A2DF1C13E00A80B40 /* LoginViewTextField.swift in Sources */,
 				5BD9C1222DF1AB0600A80B40 /* AppDelegate.swift in Sources */,
 				5BD9C1BC2DF77F7C00A80B40 /* LargeAreaButton.swift in Sources */,
@@ -574,6 +625,7 @@
 				5BD9C13A2DF1BF5A00A80B40 /* Preferences.swift in Sources */,
 				5BD9C1DA2DF9735A00A80B40 /* HomeCoordinator.swift in Sources */,
 				5BD9C1322DF1B6F700A80B40 /* UIColor.swift in Sources */,
+				5BD9C1DF2DF977A700A80B40 /* CoinViewController.swift in Sources */,
 				5BD9C1B32DF7233B00A80B40 /* Network.swift in Sources */,
 				5BD9C1642DF2349E00A80B40 /* UIAlertController.swift in Sources */,
 			);

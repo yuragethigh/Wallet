@@ -16,10 +16,10 @@ final class HomePresenter: HomePresentationLogic {
         let coin = coins.map {
             HomeViewController.HomeModel.Coin(
                 name: $0.name,
-                symbol: $0.symbol,
+                symbol: $0.symbol.uppercased(),
                 price: $0.price.currencyFormat(),
                 change: $0.change24h.percentFormat() + "%",
-                icon: $0.change24h >= 0 ? .up : .down
+                icon: $0.change24h.roundedTo(1) > 0 ? .up : ($0.change24h.roundedTo(1) < 0 ? .down : nil)
             )
         }
         DispatchQueue.main.async {
