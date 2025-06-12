@@ -71,12 +71,14 @@ final class ModalMenuView: UIView {
     private lazy var collectionView: UICollectionView = {
         let flow = UICollectionViewFlowLayout()
         flow.minimumLineSpacing = 16
+        flow.scrollDirection = .vertical
         let cv = UICollectionView(frame: .zero, collectionViewLayout: flow)
         cv.backgroundColor   = .white
         cv.layer.cornerRadius = 16
         cv.contentInset = .init(top: 16, left: 20, bottom: 16, right: 20)
         cv.dataSource   = self
         cv.delegate     = self
+        cv.isScrollEnabled = false
         cv.register(ModalViewCell.self,
                     forCellWithReuseIdentifier: ModalViewCell.id)
         cv.translatesAutoresizingMaskIntoConstraints = false

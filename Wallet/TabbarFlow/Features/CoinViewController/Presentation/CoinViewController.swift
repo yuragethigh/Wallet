@@ -34,6 +34,7 @@ final class CoinViewController: UIViewController {
         return $0
     }(UITableView(frame: .zero, style: .plain))
     
+    private let marketStatsView = MarketStatsView()
     
     // MARK: - Dependencies
     private var viewModel: ViewModel?
@@ -76,14 +77,19 @@ final class CoinViewController: UIViewController {
     
     private func setupView() {
         view.addSubview(tableView)
-        
+        view.addSubview(marketStatsView)
         view.turnoffTAMIC()
         
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            marketStatsView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            marketStatsView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            marketStatsView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            marketStatsView.heightAnchor.constraint(equalToConstant: 160)
         ])
     }
     
@@ -128,7 +134,8 @@ extension CoinViewController: UITableViewDelegate, UITableViewDataSource {
                 return cell
             case .switcher:
                 let cell = tableView.dequeueReusableCell(withIdentifier: SwitcherTVCell.id) as! SwitcherTVCell
-                
+                cell.configure()
+                cell.delegate = self
                 return cell
             }
         } else {
@@ -141,10 +148,24 @@ extension CoinViewController: UITableViewDelegate, UITableViewDataSource {
 extension CoinViewController: CoinDisplayLogic {
     func display(viewModel: ViewModel) {
         self.viewModel = viewModel
+        marketStatsView.configure(with: [
+            .init(title: "Market capitalization", value: viewModel.coin.cap),
+            .init(title: "Circulating Suply", value: viewModel.coin.suply)
+        ])
+    }
+}
+
+//MARK: - SwitcherTVCellDelegate
+extension CoinViewController: SwitcherTVCellDelegate {
+    func didSelectTime(_ time: SwitcherTVCell.Time) {
+        print(time)
     }
 }
 
 
 
-
-
+#if DEBUG
+#Preview {
+    UINavigationController(rootViewController: CoinViewControllerFactory.make(model: .init(id: "", name: "Bitcoin", symbol: "BTC", price: 11111111.23, change24h: 23)))
+}
+#endif

@@ -19,7 +19,7 @@ final class CoinPresenter: CoinPresentationLogic {
                 change: coin.change24h.percentFormat() + "%",
                 icon: coin.change24h.roundedTo(1) > 0 ? .up : (coin.change24h.roundedTo(1) < 0 ? .down : nil),
                 cap: 245356.00.currencyFormat(0),
-                suply: 1234.234.percentFormat(3) + coin.symbol
+                suply: 1234.234.percentFormat(3) + " \(coin.symbol.uppercased())"
             )
         )
         view?.display(viewModel: viewModel)

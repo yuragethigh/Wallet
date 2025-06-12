@@ -12,6 +12,7 @@ final class TabbarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAppearance()
+        addTabBarShadow()
     }
     
     func tabbarItemConfigure(
@@ -35,6 +36,13 @@ final class TabbarController: UITabBarController {
         if #available(iOS 15.0, *) {
             tabBar.scrollEdgeAppearance = tabBarAppearance
         }
+    }
+    private func addTabBarShadow() {
+        tabBar.layer.shadowColor = UIColor.black.cgColor
+        tabBar.layer.shadowOpacity = 0.25
+        tabBar.layer.shadowOffset = CGSize(width: 0, height: 4)
+        tabBar.layer.shadowRadius = 4
+        tabBar.layer.masksToBounds = false
     }
 
 

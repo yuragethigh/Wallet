@@ -15,6 +15,8 @@
 		5BD1F9BF2DFA216D001526C5 /* CoinInfoTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD1F9BE2DFA216C001526C5 /* CoinInfoTVCell.swift */; };
 		5BD1F9C12DFA21B9001526C5 /* SwitcherTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD1F9C02DFA21B7001526C5 /* SwitcherTVCell.swift */; };
 		5BD1F9C32DFA2228001526C5 /* CoinCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD1F9C22DFA2227001526C5 /* CoinCoordinator.swift */; };
+		5BD1F9C52DFAF1D2001526C5 /* IntrinsicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD1F9C42DFAF1D1001526C5 /* IntrinsicCollectionView.swift */; };
+		5BD1F9C82DFB1243001526C5 /* MarketStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD1F9C72DFB1241001526C5 /* MarketStatsView.swift */; };
 		5BD9C11F2DF1AB0600A80B40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BD9C1182DF1AB0600A80B40 /* Assets.xcassets */; };
 		5BD9C1212DF1AB0600A80B40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD9C11B2DF1AB0600A80B40 /* LaunchScreen.storyboard */; };
 		5BD9C1222DF1AB0600A80B40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9C1172DF1AB0600A80B40 /* AppDelegate.swift */; };
@@ -73,6 +75,8 @@
 		5BD1F9BE2DFA216C001526C5 /* CoinInfoTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinInfoTVCell.swift; sourceTree = "<group>"; };
 		5BD1F9C02DFA21B7001526C5 /* SwitcherTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitcherTVCell.swift; sourceTree = "<group>"; };
 		5BD1F9C22DFA2227001526C5 /* CoinCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCoordinator.swift; sourceTree = "<group>"; };
+		5BD1F9C42DFAF1D1001526C5 /* IntrinsicCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrinsicCollectionView.swift; sourceTree = "<group>"; };
+		5BD1F9C72DFB1241001526C5 /* MarketStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketStatsView.swift; sourceTree = "<group>"; };
 		5BD9C1172DF1AB0600A80B40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BD9C1182DF1AB0600A80B40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BD9C1192DF1AB0600A80B40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -144,6 +148,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		5BD1F9C62DFB1235001526C5 /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				5BD1F9C72DFB1241001526C5 /* MarketStatsView.swift */,
+			);
+			path = Subview;
+			sourceTree = "<group>";
+		};
 		5BD9C0F62DF1AAA700A80B40 = {
 			isa = PBXGroup;
 			children = (
@@ -155,16 +167,15 @@
 		5BD9C11E2DF1AB0600A80B40 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
-				5BD9C1B12DF7231D00A80B40 /* Network */,
 				5BD9C1252DF1AB0C00A80B40 /* Application */,
 				5BD9C18E2DF6036300A80B40 /* AppCoordinator */,
 				5BD9C12E2DF1B21400A80B40 /* Extensions */,
 				5BD9C1262DF1B12600A80B40 /* Resources */,
 				5BD9C15B2DF1D4D200A80B40 /* Helpers */,
-				5BD9C11B2DF1AB0600A80B40 /* LaunchScreen.storyboard */,
+				5BD9C1B12DF7231D00A80B40 /* Network */,
 				5BD9C1192DF1AB0600A80B40 /* Info.plist */,
+				5BD9C11B2DF1AB0600A80B40 /* LaunchScreen.storyboard */,
 				5BD9C1362DF1BEBF00A80B40 /* Preferences */,
-				5BD9C1DB2DF9760C00A80B40 /* Features */,
 				5BD9C1352DF1BB0F00A80B40 /* LoginFlow */,
 				5BD9C1A32DF61ABA00A80B40 /* TabbarFlow */,
 			);
@@ -245,6 +256,7 @@
 		5BD9C15B2DF1D4D200A80B40 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				5BD1F9C42DFAF1D1001526C5 /* IntrinsicCollectionView.swift */,
 				5BD9C1BB2DF77F7400A80B40 /* LargeAreaButton.swift */,
 				5BD9C15C2DF1D4E600A80B40 /* TextField.swift */,
 			);
@@ -344,6 +356,7 @@
 			children = (
 				5BD9C1A82DF61F3A00A80B40 /* TabbarController.swift */,
 				5BD9C1A62DF61E6E00A80B40 /* TabbarCoordinator.swift */,
+				5BD9C1DB2DF9760C00A80B40 /* Features */,
 			);
 			path = TabbarFlow;
 			sourceTree = "<group>";
@@ -492,6 +505,7 @@
 			isa = PBXGroup;
 			children = (
 				5BD1F9C22DFA2227001526C5 /* CoinCoordinator.swift */,
+				5BD1F9C62DFB1235001526C5 /* Subview */,
 				5BD1F9BD2DFA215C001526C5 /* Cells */,
 				5BD1F9BB2DFA20EF001526C5 /* CoinViewLogic.swift */,
 				5BD1F9B92DFA20B8001526C5 /* CoinViewController + Ext.swift */,
@@ -592,6 +606,7 @@
 				5BD9C1D52DF87ED100A80B40 /* HomeLogic.swift in Sources */,
 				5BD9C1922DF606B200A80B40 /* AppCoordinator.swift in Sources */,
 				5BD9C1B02DF71A8600A80B40 /* HomeHeaderTVCell.swift in Sources */,
+				5BD1F9C82DFB1243001526C5 /* MarketStatsView.swift in Sources */,
 				5BD9C1902DF6060E00A80B40 /* Coordinator.swift in Sources */,
 				5BD1F9BF2DFA216D001526C5 /* CoinInfoTVCell.swift in Sources */,
 				5BD9C1842DF5FBD100A80B40 /* AuthenticateUseCase.swift in Sources */,
@@ -618,6 +633,7 @@
 				5BD9C1222DF1AB0600A80B40 /* AppDelegate.swift in Sources */,
 				5BD9C1BC2DF77F7C00A80B40 /* LargeAreaButton.swift in Sources */,
 				5BD9C1232DF1AB0600A80B40 /* SceneDelegate.swift in Sources */,
+				5BD1F9C52DFAF1D2001526C5 /* IntrinsicCollectionView.swift in Sources */,
 				5BD9C1242DF1AB0600A80B40 /* LoginViewController.swift in Sources */,
 				5BD9C1A22DF60AA700A80B40 /* LoginCoordinator.swift in Sources */,
 				5BD9C1762DF5F0DE00A80B40 /* UIView.swift in Sources */,

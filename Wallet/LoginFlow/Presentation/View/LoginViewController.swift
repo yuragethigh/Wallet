@@ -84,12 +84,7 @@ final class LoginViewController: UIViewController {
         setupView()
         presenter.viewDidLoad()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
+        
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         removeKeyboardObservers()
@@ -102,18 +97,7 @@ final class LoginViewController: UIViewController {
             password: passwordTextField.textField.text ?? ""
         )
     }
-        
-    private func errorAlert(_ description: String) {
-        let alert = UIAlertController.create(
-            title: description,
-            preferredStyle: .alert,
-            actions:
-                (Strings.cancel, .cancel, { [weak self] _ in self?.clearTextFields() }),
-            (Strings.retry, .default, nil)
-        )
-        present(alert, animated: true)
-    }
-    
+
     private func clearTextFields() {
         usernameTextField.textField.text = nil
         passwordTextField.textField.text = nil
@@ -177,6 +161,18 @@ extension LoginViewController: LoginViewDelegate {
     func showError(_ message: String) {
         errorAlert(message)
     }
+    
+    private func errorAlert(_ description: String) {
+        let alert = UIAlertController.create(
+            title: description,
+            preferredStyle: .alert,
+            actions:
+                (Strings.cancel, .cancel, { [weak self] _ in self?.clearTextFields() }),
+            (Strings.retry, .default, nil)
+        )
+        present(alert, animated: true)
+    }
+
 }
 
 
