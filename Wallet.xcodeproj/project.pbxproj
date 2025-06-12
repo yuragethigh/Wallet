@@ -356,7 +356,8 @@
 			children = (
 				5BD9C1A82DF61F3A00A80B40 /* TabbarController.swift */,
 				5BD9C1A62DF61E6E00A80B40 /* TabbarCoordinator.swift */,
-				5BD9C1DB2DF9760C00A80B40 /* Features */,
+				5BD9C1AA2DF6D3C500A80B40 /* HomeFlow */,
+				5BD9C1DC2DF9764100A80B40 /* CoinViewController */,
 			);
 			path = TabbarFlow;
 			sourceTree = "<group>";
@@ -482,15 +483,6 @@
 				5BD9C1AF2DF71A8300A80B40 /* HomeHeaderTVCell.swift */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		5BD9C1DB2DF9760C00A80B40 /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				5BD9C1AA2DF6D3C500A80B40 /* HomeFlow */,
-				5BD9C1DC2DF9764100A80B40 /* CoinViewController */,
-			);
-			path = Features;
 			sourceTree = "<group>";
 		};
 		5BD9C1DC2DF9764100A80B40 /* CoinViewController */ = {
